@@ -3,113 +3,127 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Worth & Willi • Sleep Alert Triggers</title>
-  <meta name="description" content="Bits & subs required to trigger sound alerts while Dad sleeps during the 24–48 hour stream." />
+  <title>Worth & Willi • Subathon Triggers & Schedule</title>
+  <meta name="description" content="All sub, bits, gifts, and meme sound triggers for the 24–48 hour stream, plus schedule." />
   <style>
-    :root { --brand:#09add3; --bg:#0b0b0b; --fg:#fff; --muted:#cfd6d8; }
+    :root { --brand:#09add3; --bg:#0b0b0b; --fg:#ffffff; --muted:#cfd6d8; --card:#141414; --line:#1f1f1f; }
     * { box-sizing: border-box; }
     body { margin:0; font-family: system-ui, Arial, sans-serif; background:var(--bg); color:var(--fg); }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 16px; }
-    h1 { margin: 0 0 6px; color: var(--brand); text-align: center; }
-    p.tag { margin:0 0 20px; text-align:center; opacity:.85 }
-    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    .card { background: #141414; border: 1px solid #1f1f1f; border-radius: 16px; padding: 16px; }
-    .card h3 { margin: 0 0 10px; font-size: 1.05rem; color: var(--brand); }
-    .list { margin:0; padding:0; list-style:none; }
-    .list li { display:flex; justify-content:space-between; gap:10px; padding:10px 12px; border-radius:10px; background:#0f0f0f; border:1px solid #1a1a1a; }
-    .list li span.note { color: var(--muted); font-size:.95rem; }
-    .kbd { background:#111; border:1px solid #222; padding:2px 6px; border-radius:6px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-    .muted { color: var(--muted); }
-    .bar { height: 12px; background:#101010; border:1px solid #1d1d1d; border-radius:999px; overflow:hidden; }
-    .fill { height:100%; width:0%; background: var(--brand); }
-    .row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
-    .tiny { font-size:.9rem; }
-    .pill { display:inline-block; padding:2px 8px; border:1px solid #1f1f1f; border-radius:999px; background:#0f0f0f; }
-    footer { margin-top:24px; text-align:center; opacity:.75; }
-    a { color: var(--brand); text-decoration: none; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 40px 16px; }
+    h1,h2,h3 { margin:0 0 12px; }
+    h1 { color:var(--brand); text-align:center; }
+    p.tag { text-align:center; opacity:.9; margin:0 0 24px; }
+    .grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px; }
+    .card h3 { color:var(--brand); margin-bottom:8px; }
+    .list { list-style:none; margin:0; padding:0; }
+    .list li { display:flex; justify-content:space-between; gap:12px; padding:10px 12px; border-radius:12px; background:#0f0f0f; border:1px solid #1a1a1a; margin-bottom:8px; }
+    .note { color:var(--muted); }
+    .pill { display:inline-block; padding:2px 8px; border:1px solid var(--line); border-radius:999px; background:#0f0f0f; }
+    .muted { color:var(--muted); }
+    .row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .hero { background:#0e0e0e; border:1px solid var(--line); border-radius:18px; padding:18px; margin-bottom:18px; }
+    .warn { color:#ffd166; }
+    .danger { color:#ff6b6b; }
+    footer { margin-top:28px; text-align:center; opacity:.75; }
+    a { color:var(--brand); text-decoration:none; }
+    .big { font-size:1.1rem; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>Sleep Alert Triggers</h1>
-    <p class="tag">“Do Something With Your Loved Ones.” • Updates live during the subathon</p>
+    <h1>Worth & Willi • Subathon Triggers & Schedule</h1>
+    <p class="tag">“Do Something With Your Loved Ones.” • 24–48 Hour Stream</p>
 
+    <!-- Global notices -->
+    <div class="hero">
+      <div class="row">
+        <div class="pill">Fog blasts on every Sub & Prime</div>
+        <div class="pill">Train Horn on every 5 Subs</div>
+        <div class="pill">Timer increases with Subs / Bits / Donations</div>
+      </div>
+      <p class="big" style="margin:12px 0 0;"><strong>Promo:</strong> <span class="warn">35% off when gifting 5+ subs</span> (active for the next 24–48 hours).</p>
+      <p class="muted" style="margin:6px 0 0;">All sounds are enabled only during <strong>Sleep Mode</strong>. Daytime has its own event triggers below.</p>
+    </div>
+
+    <!-- Sleep Mode -->
     <div class="grid">
       <div class="card">
-        <h3>🎯 Bits → Sound Effects</h3>
+        <h3>😴 Sleep Mode — What Triggers</h3>
         <ul class="list">
-          <li><strong>25</strong> <span class="note">Soft ding</span></li>
-          <li><strong>50</strong> <span class="note">Villager “huh?”</span></li>
-          <li><strong>69</strong> <span class="note">“Nice.” + boom</span></li>
-          <li><strong>75</strong> <span class="note">Short airhorn</span></li>
-          <li><strong>100</strong> <span class="note">Glass break (2s)</span></li>
-          <li><strong>150</strong> <span class="note">Thunder clap</span></li>
-          <li><strong>200</strong> <span class="note">Gong hit (3s)</span></li>
-          <li><strong>250</strong> <span class="note">Siren burst (3s)</span></li>
-          <li><strong>300</strong> <span class="note">Creeper hiss</span></li>
-          <li><strong>420</strong> <span class="note">Kazoo riff (4s)</span></li>
-          <li><strong>500</strong> <span class="note">Alarm sweep (5s)</span></li>
-          <li><strong>750</strong> <span class="note">Scream stinger</span></li>
-          <li><strong>1000</strong> <span class="note">Air-raid (8s)</span></li>
-          <li><strong>1500</strong> <span class="note">Baby cry (10s)</span></li>
-          <li><strong>2000</strong> <span class="note">CHAOS MIX (10s)</span></li>
+          <li><strong>Every Sub / Prime</strong> <span class="note">Snore sound + lights on + fog blast</span></li>
+          <li><strong>Every 5 Subs</strong> <span class="note">Train horn • bright light in face • all lights on</span></li>
         </ul>
-        <p class="tiny muted">Same sound won’t repeat within 60s (anti-spam).</p>
+        <p class="muted">Sleep Mode = when Dad is sleeping. Sounds below fire only in Sleep Mode.</p>
       </div>
 
       <div class="card">
-        <h3>🚂 Train Horn (Subs)</h3>
-        <p>Every <strong>5 subs</strong> triggers a train horn (+ optional lights/fog).</p>
-        <div class="row tiny">
-          <div>Subs today: <span class="pill" id="subsToday">0</span></div>
-          <div>Next horn at: <span class="pill" id="nextHornAt">5</span></div>
-        </div>
-        <div class="bar" aria-label="progress to next horn">
-          <div class="fill" id="hornFill"></div>
-        </div>
-        <p class="tiny muted" id="subsToGo">5 subs to next horn</p>
-        <p class="tiny">Mods: update by adding <span class="kbd">?subs=13</span> (example) to the URL.</p>
+        <h3>🔔 Bits → Sound Alerts (Sleep Mode)</h3>
+        <ul class="list">
+          <li><strong>200</strong> <span class="note">Goofy yelling</span></li>
+          <li><strong>250</strong> <span class="note">Minecraft train</span></li>
+          <li><strong>300</strong> <span class="note">Boxing bell</span></li>
+          <li><strong>350</strong> <span class="note">Man yelling</span></li>
+          <li><strong>400</strong> <span class="note">Donkey squealing + loud laughing</span></li>
+          <li><strong>500</strong> <span class="note">“Deez Nutz”</span></li>
+          <li><strong>550</strong> <span class="note">“Wake Me Up” meme (song clip)</span></li>
+          <li><strong>750</strong> <span class="note">Loud snore</span></li>
+          <li><strong>1000</strong> <span class="note">Guy screaming “Wake up!”</span></li>
+          <li><strong>2500</strong> <span class="note">Train horn (long version)</span></li>
+          <li><strong>3000</strong> <span class="note">Clown circus song</span></li>
+          <li><strong>4000</strong> <span class="note">iPhone alarm + beat</span></li>
+        </ul>
+        <p class="muted">Tip: Set per-variation cooldowns to avoid overlap; cap max alert length ~10s overnight.</p>
       </div>
 
       <div class="card">
-        <h3>⏱️ Timer Adds</h3>
+        <h3>📱 Cross-Platform Triggers (Sleep Mode)</h3>
         <ul class="list">
-          <li><strong>Sub</strong> <span class="note">+2 min</span></li>
-          <li><strong>100 bits</strong> <span class="note">+1 min</span></li>
-          <li><strong>$10 donation</strong> <span class="note">+30 min</span></li>
+          <li><strong>TikTok Gifts</strong> <span class="note">Galaxy or any gift ≈ <strong>1000 coins</strong> → Guy screaming “Wake up!”</span></li>
+          <li><strong>TikTok Gifts</strong> <span class="note">Any gift ≈ <strong>500+ coins</strong> → Loud snoring</span></li>
+          <li><strong>YouTube Superchats</strong> <span class="note">Trigger loud meme sound (stream alert)</span></li>
         </ul>
-        <p class="tiny muted">Timer capped at 48h max.</p>
+        <p class="muted">Wire these via StreamElements/Streamlabs + Lumiastream webhooks.</p>
       </div>
     </div>
 
-    <footer class="tiny">Last updated live on stream • <a href="#" id="editLink">Edit</a></footer>
+    <!-- Daytime Mode -->
+    <div class="card" style="margin-top:16px;">
+      <h3>🌞 Daytime Mode — Events (While Dad is Awake)</h3>
+      <ul class="list">
+        <li><strong>5 Subs</strong> <span class="note">Pie in the face for Dad or Son or Mom</span></li>
+        <li><strong>10 Subs</strong> <span class="note">3 pies (you get 1 extra)</span></li>
+        <li><strong>10+ Subs</strong> <span class="note">Trampoline fight</span></li>
+        <li><strong>15 Subs</strong> <span class="note">Pie + Trampoline fight</span></li>
+        <li><strong>25 Subs</strong> <span class="note">Cosplay trampoline</span></li>
+        <li><strong>50 Subs</strong> <span class="note">Water bucket</span></li>
+      </ul>
+      <p class="muted">During daylight only. While awake, sound spam is limited and Sleep Mode sounds are off.</p>
+    </div>
+
+    <!-- Timer info (kept simple, no live counters) -->
+    <div class="card" style="margin-top:16px;">
+      <h3>⏱️ Timer Adds & Cap</h3>
+      <ul class="list">
+        <li><strong>Per Sub</strong> <span class="note">+2 minutes</span></li>
+        <li><strong>Per 100 Bits</strong> <span class="note">+1 minute</span></li>
+        <li><strong>Per $10 Donation</strong> <span class="note">+30 minutes</span></li>
+      </ul>
+      <p class="muted">The stream timer is capped at a maximum of 48 hours.</p>
+    </div>
+
+    <!-- Schedule -->
+    <div class="card" style="margin-top:16px;">
+      <h3>📅 Schedule (Eastern Time)</h3>
+      <ul class="list">
+        <li><strong>Wake Rule</strong> <span class="note danger">If Worth is not up by <strong>10:00 AM ET</strong>, he gets a pie in the face.</span></li>
+        <li><strong>Breakfast Cooking Stream</strong> <span class="note">11:00 AM ET • <strong>November 2</strong></span></li>
+        <li><strong>Dinner Cooking Stream</strong> <span class="note">~6:00 PM ET • <strong>November 2</strong></span></li>
+      </ul>
+      <p class="muted">Times subject to minor shifts based on stream progress.</p>
+    </div>
+
+    <footer>Last updated for the 24–48 Hour Stream • “Treat your loved ones right.”</footer>
   </div>
-
-  <script>
-    // Simple “subs to next horn” calculator via URL param ?subs=NUMBER
-    const qs = new URLSearchParams(location.search);
-    const subs = Math.max(0, parseInt(qs.get('subs') || '0', 10) || 0);
-
-    const subsTodayEl = document.getElementById('subsToday');
-    const nextHornAtEl = document.getElementById('nextHornAt');
-    const hornFill = document.getElementById('hornFill');
-    const subsToGoEl = document.getElementById('subsToGo');
-
-    subsTodayEl.textContent = subs.toString();
-
-    // Next multiple of 5 (e.g., if 13 subs, next horn at 15)
-    const remainder = subs % 5;
-    const toGo = remainder === 0 ? 5 : 5 - remainder;
-    const nextAt = subs + toGo;
-
-    nextHornAtEl.textContent = nextAt.toString();
-    subsToGoEl.textContent = `${toGo} sub${toGo===1?'':'s'} to next horn`;
-    const pct = ((5 - toGo) / 5) * 100;
-    hornFill.style.width = `${pct}%`;
-
-    // Optional: link straight to this file for quick edits on GitHub
-    const editLink = document.getElementById('editLink');
-    editLink.href = 'https://github.com/USERNAME/REPO/edit/main/index.html'; // <-- replace
-  </script>
 </body>
 </html>
