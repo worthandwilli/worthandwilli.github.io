@@ -38,12 +38,12 @@
     <!-- Global notices -->
     <div class="hero">
       <div class="row">
-        <div class="pill">Fog blasts on every Sub & Prime</div>
-        <div class="pill">Train Horn on every 5 Subs</div>
+        <div class="pill">Fog blasts only during the day</div>
+        <div class="pill">Train Horn every 5 Subs</div>
         <div class="pill">Timer increases with Subs / Bits / Donations</div>
       </div>
       <p class="big" style="margin:12px 0 0;"><strong>Promo:</strong> <span class="warn">35% off when gifting 5+ subs</span> (active for the next 24–48 hours).</p>
-      <p class="muted" style="margin:6px 0 0;">All sounds are enabled only during <strong>Sleep Mode</strong>. Daytime has its own event triggers below.</p>
+      <p class="muted" style="margin:6px 0 0;">All Sleep Mode sounds are only active when Dad is asleep.</p>
     </div>
 
     <!-- Sleep Mode -->
@@ -51,10 +51,10 @@
       <div class="card">
         <h3>😴 Sleep Mode — What Triggers</h3>
         <ul class="list">
-          <li><strong>Every Sub / Prime</strong> <span class="note">Snore sound + lights on + fog blast</span></li>
+          <li><strong>Every Sub / Prime</strong> <span class="note">Snore sound + lights on</span></li>
           <li><strong>Every 5 Subs</strong> <span class="note">Train horn • bright light in face • all lights on</span></li>
         </ul>
-        <p class="muted">Sleep Mode = when Dad is sleeping. Sounds below fire only in Sleep Mode.</p>
+        <p class="muted">Sleep Mode = when Dad is sleeping. No fog is active during this mode.</p>
       </div>
 
       <div class="card">
@@ -73,7 +73,7 @@
           <li><strong>3000</strong> <span class="note">Clown circus song</span></li>
           <li><strong>4000</strong> <span class="note">iPhone alarm + beat</span></li>
         </ul>
-        <p class="muted">Tip: Set per-variation cooldowns to avoid overlap; cap max alert length ~10s overnight.</p>
+        <p class="muted">Each sound plays once per trigger and will not repeat within 60 seconds.</p>
       </div>
 
       <div class="card">
@@ -81,9 +81,9 @@
         <ul class="list">
           <li><strong>TikTok Gifts</strong> <span class="note">Galaxy or any gift ≈ <strong>1000 coins</strong> → Guy screaming “Wake up!”</span></li>
           <li><strong>TikTok Gifts</strong> <span class="note">Any gift ≈ <strong>500+ coins</strong> → Loud snoring</span></li>
-          <li><strong>YouTube Superchats</strong> <span class="note">Trigger loud meme sound (stream alert)</span></li>
+          <li><strong>YouTube Superchats</strong> <span class="note">Trigger loud meme sound</span></li>
         </ul>
-        <p class="muted">Wire these via StreamElements/Streamlabs + Lumiastream webhooks.</p>
+        <p class="muted">Configured via StreamElements / Streamlabs / Lumiastream webhooks.</p>
       </div>
     </div>
 
@@ -91,25 +91,26 @@
     <div class="card" style="margin-top:16px;">
       <h3>🌞 Daytime Mode — Events (While Dad is Awake)</h3>
       <ul class="list">
-        <li><strong>5 Subs</strong> <span class="note">Pie in the face for Dad or Son or Mom</span></li>
-        <li><strong>10 Subs</strong> <span class="note">3 pies (you get 1 extra)</span></li>
+        <li><strong>Every Sub / Prime</strong> <span class="note">Fog blast + lights on</span></li>
+        <li><strong>5 Subs</strong> <span class="note">Pie in the face for Dad, Son, or Mom</span></li>
+        <li><strong>10 Subs</strong> <span class="note">3 pies total (1 bonus pie)</span></li>
         <li><strong>10+ Subs</strong> <span class="note">Trampoline fight</span></li>
         <li><strong>15 Subs</strong> <span class="note">Pie + Trampoline fight</span></li>
         <li><strong>25 Subs</strong> <span class="note">Cosplay trampoline</span></li>
         <li><strong>50 Subs</strong> <span class="note">Water bucket</span></li>
       </ul>
-      <p class="muted">During daylight only. While awake, sound spam is limited and Sleep Mode sounds are off.</p>
+      <p class="muted">Fog is only active during daytime events. Sleep Mode fog is off.</p>
     </div>
 
-    <!-- Timer info (kept simple, no live counters) -->
+    <!-- Timer info -->
     <div class="card" style="margin-top:16px;">
       <h3>⏱️ Timer Adds & Cap</h3>
       <ul class="list">
-        <li><strong>Per Sub</strong> <span class="note">+2 minutes</span></li>
+        <li><strong>Per Sub</strong> <span class="note">+2.5 minutes</span></li>
         <li><strong>Per 100 Bits</strong> <span class="note">+1 minute</span></li>
         <li><strong>Per $10 Donation</strong> <span class="note">+30 minutes</span></li>
       </ul>
-      <p class="muted">The stream timer is capped at a maximum of 48 hours.</p>
+      <p class="muted">The stream timer is capped at 48 hours max.</p>
     </div>
 
     <!-- Schedule -->
@@ -120,7 +121,7 @@
         <li><strong>Breakfast Cooking Stream</strong> <span class="note">11:00 AM ET • <strong>November 2</strong></span></li>
         <li><strong>Dinner Cooking Stream</strong> <span class="note">~6:00 PM ET • <strong>November 2</strong></span></li>
       </ul>
-      <p class="muted">Times subject to minor shifts based on stream progress.</p>
+      <p class="muted">Times may shift slightly based on subathon progress.</p>
     </div>
 
     <footer>Last updated for the 24–48 Hour Stream • “Treat your loved ones right.”</footer>
