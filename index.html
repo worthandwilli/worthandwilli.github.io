@@ -6,13 +6,16 @@
   <title>Worth & Willi • Subathon Triggers & Schedule</title>
   <meta name="description" content="All sub, bits, gifts, and meme sound triggers for the 24–48 hour stream, plus schedule." />
   <style>
-    :root { --brand:#09add3; --bg:#0b0b0b; --fg:#ffffff; --muted:#cfd6d8; --card:#141414; --line:#1f1f1f; }
+    :root { --brand:#09add3; --bg:#0b0b0b; --fg:#ffffff; --muted:#cfd6d8; --card:#141414; --line:#1f1f1f; --accent:#1b3a4b; }
     * { box-sizing: border-box; }
     body { margin:0; font-family: system-ui, Arial, sans-serif; background:var(--bg); color:var(--fg); }
     .wrap { max-width: 1100px; margin: 0 auto; padding: 40px 16px; }
     h1,h2,h3 { margin:0 0 12px; }
     h1 { color:var(--brand); text-align:center; }
     p.tag { text-align:center; opacity:.9; margin:0 0 24px; }
+    .hero { background:#0e0e0e; border:1px solid var(--line); border-radius:18px; padding:18px; margin-bottom:18px; }
+    .banner { background:#102027; border:1px solid #15313a; border-left:6px solid var(--brand); border-radius:12px; padding:14px 16px; margin:0 0 16px; }
+    .banner strong { color:#a7ecff; }
     .grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
     .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px; }
     .card h3 { color:var(--brand); margin-bottom:8px; }
@@ -20,9 +23,7 @@
     .list li { display:flex; justify-content:space-between; gap:12px; padding:10px 12px; border-radius:12px; background:#0f0f0f; border:1px solid #1a1a1a; margin-bottom:8px; }
     .note { color:var(--muted); }
     .pill { display:inline-block; padding:2px 8px; border:1px solid var(--line); border-radius:999px; background:#0f0f0f; }
-    .muted { color:var(--muted); }
     .row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-    .hero { background:#0e0e0e; border:1px solid var(--line); border-radius:18px; padding:18px; margin-bottom:18px; }
     .warn { color:#ffd166; }
     .danger { color:#ff6b6b; }
     footer { margin-top:28px; text-align:center; opacity:.75; }
@@ -35,15 +36,23 @@
     <h1>Worth & Willi • Subathon Triggers & Schedule</h1>
     <p class="tag">“Do Something With Your Loved Ones.” • 24–48 Hour Stream</p>
 
+    <!-- Status banner (today + hard end time) -->
+    <div class="banner">
+      <div><strong>Events are ON today — November 3 (ET).</strong></div>
+      <div class="note">The timer is MAXED (48 hours). The stream ends at <strong>9:00 PM ET</strong> tonight.</div>
+    </div>
+
     <!-- Global notices -->
     <div class="hero">
       <div class="row">
         <div class="pill">Fog blasts only during the day</div>
         <div class="pill">Train Horn every 5 Subs</div>
-        <div class="pill">Timer increases with Subs / Bits / Donations</div>
+        <div class="pill">Timer increases with Subs / Bits / Donations (now maxed)</div>
       </div>
-      <p class="big" style="margin:12px 0 0;"><strong>Promo:</strong> <span class="warn">35% off when gifting 5+ subs</span> (active for the next 24–48 hours).</p>
-      <p class="muted" style="margin:6px 0 0;">All Sleep Mode sounds are only active when Dad is asleep.</p>
+      <p class="big" style="margin:12px 0 0;">
+        <strong>Promo:</strong> <span class="warn">35% off when gifting 5+ subs</span> (active through today).
+      </p>
+      <p class="note" style="margin:6px 0 0;">Sleep Mode sounds are only active when Dad is asleep. Timer will not extend past 9:00 PM ET.</p>
     </div>
 
     <!-- Sleep Mode -->
@@ -54,7 +63,7 @@
           <li><strong>Every Sub / Prime</strong> <span class="note">Snore sound + lights on</span></li>
           <li><strong>Every 5 Subs</strong> <span class="note">Train horn • bright light in face • all lights on</span></li>
         </ul>
-        <p class="muted">Sleep Mode = when Dad is sleeping. No fog is active during this mode.</p>
+        <p class="note">No fog during Sleep Mode.</p>
       </div>
 
       <div class="card">
@@ -73,17 +82,17 @@
           <li><strong>3000</strong> <span class="note">Clown circus song</span></li>
           <li><strong>4000</strong> <span class="note">iPhone alarm + beat</span></li>
         </ul>
-        <p class="muted">Each sound plays once per trigger and will not repeat within 60 seconds.</p>
+        <p class="note">Each sound plays once per trigger and won’t repeat within 60 seconds.</p>
       </div>
 
       <div class="card">
         <h3>📱 Cross-Platform Triggers (Sleep Mode)</h3>
         <ul class="list">
-          <li><strong>TikTok Gifts</strong> <span class="note">Galaxy or any gift ≈ <strong>1000 coins</strong> → Guy screaming “Wake up!”</span></li>
-          <li><strong>TikTok Gifts</strong> <span class="note">Any gift ≈ <strong>500+ coins</strong> → Loud snoring</span></li>
-          <li><strong>YouTube Superchats</strong> <span class="note">Trigger loud meme sound</span></li>
+          <li><strong>TikTok</strong> <span class="note">Galaxy / ~1000 coins → Guy screaming “Wake up!”</span></li>
+          <li><strong>TikTok</strong> <span class="note">≥500 coins → Loud snoring</span></li>
+          <li><strong>YouTube</strong> <span class="note">Superchats trigger loud meme sound</span></li>
         </ul>
-        <p class="muted">Configured via StreamElements / Streamlabs / Lumiastream webhooks.</p>
+        <p class="note">Configured via StreamElements / Streamlabs / Lumiastream webhooks.</p>
       </div>
     </div>
 
@@ -92,14 +101,14 @@
       <h3>🌞 Daytime Mode — Events (While Dad is Awake)</h3>
       <ul class="list">
         <li><strong>Every Sub / Prime</strong> <span class="note">Fog blast + lights on</span></li>
-        <li><strong>5 Subs</strong> <span class="note">Pie in the face for Dad, Son, or Mom</span></li>
+        <li><strong>5 Subs</strong> <span class="note">Pie in the face (Dad / Son / Mom)</span></li>
         <li><strong>10 Subs</strong> <span class="note">3 pies total (1 bonus pie)</span></li>
         <li><strong>10+ Subs</strong> <span class="note">Trampoline fight</span></li>
         <li><strong>15 Subs</strong> <span class="note">Pie + Trampoline fight</span></li>
         <li><strong>25 Subs</strong> <span class="note">Cosplay trampoline</span></li>
         <li><strong>50 Subs</strong> <span class="note">Water bucket</span></li>
       </ul>
-      <p class="muted">Fog is only active during daytime events. Sleep Mode fog is off.</p>
+      <p class="note">Daylight only.</p>
     </div>
 
     <!-- Timer info -->
@@ -110,21 +119,21 @@
         <li><strong>Per 100 Bits</strong> <span class="note">+1 minute</span></li>
         <li><strong>Per $10 Donation</strong> <span class="note">+30 minutes</span></li>
       </ul>
-      <p class="muted">The stream timer is capped at 48 hours max.</p>
+      <p class="note">The timer is currently MAXED (48h). Stream ends at <strong>9:00 PM ET</strong> today.</p>
     </div>
 
     <!-- Schedule -->
     <div class="card" style="margin-top:16px;">
       <h3>📅 Schedule (Eastern Time)</h3>
       <ul class="list">
-        <li><strong>Wake Rule</strong> <span class="note danger">If Worth is not up by <strong>10:00 AM ET</strong>, he gets a pie in the face.</span></li>
+        <li><strong>Wake Rule</strong> <span class="note danger">If Worth isn’t up by <strong>10:00 AM ET</strong>, he gets a pie in the face.</span></li>
         <li><strong>Breakfast Cooking Stream</strong> <span class="note">11:00 AM ET • <strong>November 2</strong></span></li>
         <li><strong>Dinner Cooking Stream</strong> <span class="note">~6:00 PM ET • <strong>November 2</strong></span></li>
+        <li><strong>Finale / Stream End</strong> <span class="note"><strong>9:00 PM ET • November 3</strong></span></li>
       </ul>
-      <p class="muted">Times may shift slightly based on subathon progress.</p>
     </div>
 
-    <footer>Last updated for the 24–48 Hour Stream • “Treat your loved ones right.”</footer>
+    <footer>Updated November 3 • “Treat your loved ones right.”</footer>
   </div>
 </body>
 </html>
