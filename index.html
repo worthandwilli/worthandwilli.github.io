@@ -1,139 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Worth & Willi • Subathon Triggers & Schedule</title>
-  <meta name="description" content="All sub, bits, gifts, and meme sound triggers for the 24–48 hour stream, plus schedule." />
-  <style>
-    :root { --brand:#09add3; --bg:#0b0b0b; --fg:#ffffff; --muted:#cfd6d8; --card:#141414; --line:#1f1f1f; --accent:#1b3a4b; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: system-ui, Arial, sans-serif; background:var(--bg); color:var(--fg); }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 40px 16px; }
-    h1,h2,h3 { margin:0 0 12px; }
-    h1 { color:var(--brand); text-align:center; }
-    p.tag { text-align:center; opacity:.9; margin:0 0 24px; }
-    .hero { background:#0e0e0e; border:1px solid var(--line); border-radius:18px; padding:18px; margin-bottom:18px; }
-    .banner { background:#102027; border:1px solid #15313a; border-left:6px solid var(--brand); border-radius:12px; padding:14px 16px; margin:0 0 16px; }
-    .banner strong { color:#a7ecff; }
-    .grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-    .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px; }
-    .card h3 { color:var(--brand); margin-bottom:8px; }
-    .list { list-style:none; margin:0; padding:0; }
-    .list li { display:flex; justify-content:space-between; gap:12px; padding:10px 12px; border-radius:12px; background:#0f0f0f; border:1px solid #1a1a1a; margin-bottom:8px; }
-    .note { color:var(--muted); }
-    .pill { display:inline-block; padding:2px 8px; border:1px solid var(--line); border-radius:999px; background:#0f0f0f; }
-    .row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-    .warn { color:#ffd166; }
-    .danger { color:#ff6b6b; }
-    footer { margin-top:28px; text-align:center; opacity:.75; }
-    a { color:var(--brand); text-decoration:none; }
-    .big { font-size:1.1rem; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <h1>Worth & Willi • Subathon Triggers & Schedule</h1>
-    <p class="tag">“Do Something With Your Loved Ones.” • 24–48 Hour Stream</p>
+// events.js
+// Worth & Willi – Event / Scare Info
 
-    <!-- Status banner (today + hard end time) -->
-    <div class="banner">
-      <div><strong>Events are ON today — November 3 (ET).</strong></div>
-      <div class="note">The timer is MAXED (48 hours). The stream ends at <strong>9:00 PM ET</strong> tonight.</div>
-    </div>
+// ========================
+// DATA
+// ========================
 
-    <!-- Global notices -->
-    <div class="hero">
-      <div class="row">
-        <div class="pill">Fog blasts only during the day</div>
-        <div class="pill">Train Horn every 5 Subs</div>
-        <div class="pill">Timer increases with Subs / Bits / Donations (now maxed)</div>
-      </div>
-      <p class="big" style="margin:12px 0 0;">
-        <strong>Promo:</strong> <span class="warn">35% off when gifting 5+ subs</span> (active through today).
-      </p>
-      <p class="note" style="margin:6px 0 0;">Sleep Mode sounds are only active when Dad is asleep. Timer will not extend past 9:00 PM ET.</p>
-    </div>
+// Main banner: October event is over, scares remain
+const currentEvent = {
+  title: 'Event Update – October Event is Over',
+  subtitle: 'Scares are still very real…',
+  paragraphs: [
+    'Our October event has officially ended — thank you all for the insane support during spooky season!',
+    'Even though the October event is over, the scares are still active on stream.',
+    'Bits still trigger scare alerts, and yes… they absolutely still scare us.',
+    '5 Gifted Sub and 10 Gifted Sub scare effects are still in place and will remain active.',
+    'Pie to the face is still on the menu — the donator gets to choose who takes it.',
+    'We will be updating this event page later in the month with new events and/or goals, so check back soon!'
+  ]
+};
 
-    <!-- Sleep Mode -->
-    <div class="grid">
-      <div class="card">
-        <h3>😴 Sleep Mode — What Triggers</h3>
-        <ul class="list">
-          <li><strong>Every Sub / Prime</strong> <span class="note">Snore sound + lights on</span></li>
-          <li><strong>Every 5 Subs</strong> <span class="note">Train horn • bright light in face • all lights on</span></li>
-        </ul>
-        <p class="note">No fog during Sleep Mode.</p>
-      </div>
+// Bits scare setup (these are the ones you told me before)
+// You can edit any of these labels/texts if something changes.
+const bitScares = [
+  {
+    amount: 200,
+    title: '200 Bits',
+    description: 'Scare alert – still active and still terrifying.'
+  },
+  {
+    amount: 250,
+    title: '250 Bits',
+    description: 'Goofy yelling / Minecraft train sound – jump scare vibes.'
+  },
+  {
+    amount: 300,
+    title: '300 Bits',
+    description: 'Boxing bell – loud and sharp, perfect to scare Dad while focused.'
+  },
+  {
+    amount: 350,
+    title: '350 Bits',
+    description: 'Man yelling – sudden shout that makes everyone flinch.'
+  },
+  {
+    amount: 400,
+    title: '400 Bits',
+    description: 'Donkey squealing loud laughing – cursed noise, big panic.'
+  },
+  {
+    amount: 500,
+    title: '500 Bits',
+    description: 'Deez Nutz sound – pure chaos energy.'
+  },
+  {
+    amount: 550,
+    title: '550 Bits',
+    description: '“Wake Me Up” meme song – blasts out of nowhere.'
+  },
+  {
+    amount: 750,
+    title: '750 Bits',
+    description: 'Loud snore – perfect for trolling during chill moments.'
+  },
+  {
+    amount: 1000,
+    title: '1000 Bits',
+    description: 'Guy screaming “WAKE UP!” – destroys any chance of sleeping.'
+  },
+  {
+    amount: 2500,
+    title: '2500 Bits',
+    description: 'Train horn plays for a long time – maximum anxiety.'
+  },
+  {
+    amount: 3000,
+    title: '3000 Bits',
+    description: 'Clown circus song – full chaotic clown energy.'
+  },
+  {
+    amount: 4000,
+    title: '4000 Bits',
+    description: 'iPhone alarm + beat – the worst sound combo you could imagine.'
+  }
+];
 
-      <div class="card">
-        <h3>🔔 Bits → Sound Alerts (Sleep Mode)</h3>
-        <ul class="list">
-          <li><strong>200</strong> <span class="note">Minecraft train</span></li>
-          <li><strong>250</strong> <span class="note">Goofy yelling</span></li>
-          <li><strong>300</strong> <span class="note">Boxing bell</span></li>
-          <li><strong>350</strong> <span class="note">Man yelling</span></li>
-          <li><strong>400</strong> <span class="note">Donkey squealing + loud laughing</span></li>
-          <li><strong>500</strong> <span class="note">“Deez Nutz”</span></li>
-          <li><strong>550</strong> <span class="note">“Wake Me Up” meme (song clip)</span></li>
-          <li><strong>750</strong> <span class="note">Loud snore</span></li>
-          <li><strong>1000</strong> <span class="note">Guy screaming “Wake up!”</span></li>
-          <li><strong>2500</strong> <span class="note">Train horn (long version)</span></li>
-          <li><strong>3000</strong> <span class="note">Clown circus song</span></li>
-          <li><strong>4000</strong> <span class="note">iPhone alarm + beat</span></li>
-        </ul>
-        <p class="note">Each sound plays once per trigger and won’t repeat within 60 seconds.</p>
-      </div>
+// Gifted sub scare setup
+const giftSubScares = [
+  {
+    count: 5,
+    title: '5 Gifted Subs',
+    description: 'Triggers a scare effect – still active, still evil.'
+  },
+  {
+    count: 10,
+    title: '10 Gifted Subs',
+    description: 'Bigger scare effect – seriously makes us question our life choices.'
+  }
+];
 
-      <div class="card">
-        <h3>📱 Cross-Platform Triggers (Sleep Mode)</h3>
-        <ul class="list">
-          <li><strong>TikTok</strong> <span class="note">Galaxy / ~1000 coins → Guy screaming “Wake up!”</span></li>
-          <li><strong>TikTok</strong> <span class="note">≥500 coins → Loud snoring</span></li>
-          <li><strong>YouTube</strong> <span class="note">Superchats trigger loud meme sound</span></li>
-        </ul>
-        <p class="note">Configured via StreamElements / Streamlabs / Lumiastream webhooks.</p>
-      </div>
-    </div>
+// Pie-to-the-face info
+const pieInfo = {
+  title: '🥧 Pie to the Face',
+  lines: [
+    'Pie to the face is still active!',
+    'When you donate for a pie, you get to choose who takes it: Dad or Willi.',
+    'This will remain available even though the October event has ended.'
+  ]
+};
 
-    <!-- Daytime Mode -->
-    <div class="card" style="margin-top:16px;">
-      <h3>🌞 Daytime Mode — Events (While Dad is Awake)</h3>
-      <ul class="list">
-        <li><strong>Every Sub / Prime</strong> <span class="note">Fog blast + lights on</span></li>
-        <li><strong>5 Subs</strong> <span class="note">Pie in the face (Dad / Son / Mom)</span></li>
-        <li><strong>10 Subs</strong> <span class="note">3 pies total (1 bonus pie)</span></li>
-        <li><strong>10+ Subs</strong> <span class="note">Trampoline fight</span></li>
-        <li><strong>15 Subs</strong> <span class="note">Pie + Trampoline fight</span></li>
-        <li><strong>25 Subs</strong> <span class="note">Cosplay trampoline</span></li>
-        <li><strong>50 Subs</strong> <span class="note">Water bucket</span></li>
-      </ul>
-      <p class="note">Daylight only.</p>
-    </div>
+// Footer note
+const footerNote = {
+  text: 'This page will be updated later in the month with new events, goals, and surprises. Stay tuned!'
+};
 
-    <!-- Timer info -->
-    <div class="card" style="margin-top:16px;">
-      <h3>⏱️ Timer Adds & Cap</h3>
-      <ul class="list">
-        <li><strong>Per Sub</strong> <span class="note">+2.5 minutes</span></li>
-        <li><strong>Per 100 Bits</strong> <span class="note">+1 minute</span></li>
-        <li><strong>Per $10 Donation</strong> <span class="note">+30 minutes</span></li>
-      </ul>
-      <p class="note">The timer is currently MAXED (48h). Stream ends at <strong>9:00 PM ET</strong> today.</p>
-    </div>
 
-    <!-- Schedule -->
-    <div class="card" style="margin-top:16px;">
-      <h3>📅 Schedule (Eastern Time)</h3>
-      <ul class="list">
-        <li><strong>Wake Rule</strong> <span class="note danger">If Worth isn’t up by <strong>10:00 AM ET</strong>, he gets a pie in the face.</span></li>
-        <li><strong>Breakfast Cooking Stream</strong> <span class="note">11:00 AM ET • <strong>November 2</strong></span></li>
-        <li><strong>Dinner Cooking Stream</strong> <span class="note">~6:00 PM ET • <strong>November 2</strong></span></li>
-        <li><strong>Finale / Stream End</strong> <span class="note"><strong>9:00 PM ET • November 3</strong></span></li>
-      </ul>
-    </div>
+// ========================
+// RENDER HELPERS
+// ========================
 
-    <footer>Updated November 3 • “Treat your loved ones right.”</footer>
-  </div>
-</body>
-</html>
+function createElement(tag, className, text) {
+  const el = document.createElement(tag);
+  if (className) el.className = className;
+  if (typeof text === 'string') el.textContent = text;
+  return el;
+}
+
+// Render the main event banner
+function renderCurrentEvent() {
+  const container = document.getElementById('current-event');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  const titleEl = createElement('h2', 'event-title', currentEvent.title);
+  const subtitleEl = createElement('h3', 'event-subtitle', currentEvent.subtitle);
+
+  container.appendChild(titleEl);
+  container.appendChild(subtitleEl);
+
+  currentEvent.paragraphs.forEach(p => {
+    const pEl = createElement('p', 'event-paragraph', p);
+    container.appendChild(pEl);
+  });
+}
+
+// Render bits scare list
+function renderBitScares() {
+  const container = document.getElementById('bits-scares');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  const heading = createElement('h3', 'section-title', 'Bits – Scare Alerts (Still Active)');
+  container.appendChild(heading);
+
+  const list = createElement('ul', 'bits-list');
+  bitScares.forEach(item => {
+    const li = createElement('li', 'bits-item');
+    const label = `${item.title}: ${item.description}`;
+    li.textContent = label;
+    list.appendChild(li);
+  });
+
+  container.appendChild(list);
+
+  const note = createElement(
+    'p',
+    'section-note',
+    'These bit alerts are still live and can (and will) scare us on stream.'
+  );
+  container.appendChild(note);
+}
+
+// Render gifted sub scare info
+function renderGiftSubScares() {
+  const container = document.getElementById('gift-sub-scares');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  const heading = createElement('h3', 'section-title', 'Gifted Subs – Scare Effects');
+  container.appendChild(heading);
+
+  const list = createElement('ul', 'gift-subs-list');
+  giftSubScares.forEach(item => {
+    const li = createElement('li', 'gift-subs-item');
+    const label = `${item.count} Gifted Subs: ${item.description}`;
+    li.textContent = label;
+    list.appendChild(li);
+  });
+
+  container.appendChild(list);
+}
+
+// Render pie info
+function renderPieInfo() {
+  const container = document.getElementById('pie-info');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  const heading = createElement('h3', 'section-title', pieInfo.title);
+  container.appendChild(heading);
+
+  pieInfo.lines.forEach(line => {
+    const p = createElement('p', 'pie-line', line);
+    container.appendChild(p);
+  });
+}
+
+// Render footer note
+function renderFooterNote() {
+  const container = document.getElementById('event-footer');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  const p = createElement('p', 'footer-note', footerNote.text);
+  container.appendChild(p);
+}
+
+
+// ========================
+// INIT
+// ========================
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderCurrentEvent();
+  renderBitScares();
+  renderGiftSubScares();
+  renderPieInfo();
+  renderFooterNote();
+});
+
