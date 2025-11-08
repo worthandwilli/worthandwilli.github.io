@@ -1,235 +1,141 @@
-// events.js
-// Worth & Willi – Event / Scare Info
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Worth & Willi – Event Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b0b10;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      color: #c4c4c4;
+      font-size: 0.95rem;
+    }
+    .card {
+      background: #171720;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #2c2c3a;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      line-height: 1.5;
+      margin: 0.35rem 0;
+    }
+    ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 0.75rem;
+    }
+    li {
+      margin: 0.2rem 0;
+    }
+    .tag {
+      display: inline-block;
+      background: #252538;
+      color: #ffcc66;
+      border-radius: 999px;
+      padding: 0.15rem 0.65rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .footer-note {
+      text-align: center;
+      color: #b0b0b8;
+      font-size: 0.9rem;
+      margin-top: 1.5rem;
+    }
+    a {
+      color: #5fc8ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Worth &amp; Willi – Event Status</h1>
+      <p>Family-friendly chaos, scares, pies, and good vibes. 🧡</p>
+    </header>
 
-// ========================
-// DATA
-// ========================
+    <!-- MAIN EVENT UPDATE -->
+    <section class="card">
+      <div class="tag">Event Update</div>
+      <h2>🎃 October Event Is Officially Over</h2>
+      <p>
+        Our October event has wrapped up — thank you all for hanging out with us and making spooky season
+        absolutely wild!
+      </p>
+      <p>
+        Even though the October event is over, some of the chaos is <strong>still live on stream</strong>:
+      </p>
+      <ul>
+        <li><strong>Bits are still in place</strong> and yes… they <strong>still scare us</strong>.</li>
+        <li>
+          <strong>5 Gifted Subs</strong> and <strong>10 Gifted Subs</strong> still trigger
+          <strong>scare effects</strong>.
+        </li>
+        <li>
+          We still take a <strong>pie to the face</strong> — and the <strong>donator chooses who</strong> gets it
+          (Dad or Willi).
+        </li>
+      </ul>
+      <p>
+        So even outside of October, you can still jump in, drop scares, and keep us on edge every stream. 😂
+      </p>
+    </section>
 
-// Main banner: October event is over, scares remain
-const currentEvent = {
-  title: 'Event Update – October Event is Over',
-  subtitle: 'Scares are still very real…',
-  paragraphs: [
-    'Our October event has officially ended — thank you all for the insane support during spooky season!',
-    'Even though the October event is over, the scares are still active on stream.',
-    'Bits still trigger scare alerts, and yes… they absolutely still scare us.',
-    '5 Gifted Sub and 10 Gifted Sub scare effects are still in place and will remain active.',
-    'Pie to the face is still on the menu — the donator gets to choose who takes it.',
-    'We will be updating this event page later in the month with new events and/or goals, so check back soon!'
-  ]
-};
+    <!-- FUTURE UPDATE NOTE -->
+    <section class="card">
+      <h2>📆 What’s Next?</h2>
+      <p>
+        We’re going to update this event page <strong>later in the month</strong> with
+        <strong>new events, goals, and rewards</strong>.
+      </p>
+      <p>
+        Keep an eye on this page (and our streams) for the next round of chaos, challenges, and wholesome
+        moments with the Worth &amp; Willi community. 💙
+      </p>
+    </section>
 
-// Bits scare setup (these are the ones you told me before)
-// You can edit any of these labels/texts if something changes.
-const bitScares = [
-  {
-    amount: 200,
-    title: '200 Bits',
-    description: 'Scare alert – still active and still terrifying.'
-  },
-  {
-    amount: 250,
-    title: '250 Bits',
-    description: 'Goofy yelling / Minecraft train sound – jump scare vibes.'
-  },
-  {
-    amount: 300,
-    title: '300 Bits',
-    description: 'Boxing bell – loud and sharp, perfect to scare Dad while focused.'
-  },
-  {
-    amount: 350,
-    title: '350 Bits',
-    description: 'Man yelling – sudden shout that makes everyone flinch.'
-  },
-  {
-    amount: 400,
-    title: '400 Bits',
-    description: 'Donkey squealing loud laughing – cursed noise, big panic.'
-  },
-  {
-    amount: 500,
-    title: '500 Bits',
-    description: 'Deez Nutz sound – pure chaos energy.'
-  },
-  {
-    amount: 550,
-    title: '550 Bits',
-    description: '“Wake Me Up” meme song – blasts out of nowhere.'
-  },
-  {
-    amount: 750,
-    title: '750 Bits',
-    description: 'Loud snore – perfect for trolling during chill moments.'
-  },
-  {
-    amount: 1000,
-    title: '1000 Bits',
-    description: 'Guy screaming “WAKE UP!” – destroys any chance of sleeping.'
-  },
-  {
-    amount: 2500,
-    title: '2500 Bits',
-    description: 'Train horn plays for a long time – maximum anxiety.'
-  },
-  {
-    amount: 3000,
-    title: '3000 Bits',
-    description: 'Clown circus song – full chaotic clown energy.'
-  },
-  {
-    amount: 4000,
-    title: '4000 Bits',
-    description: 'iPhone alarm + beat – the worst sound combo you could imagine.'
-  }
-];
-
-// Gifted sub scare setup
-const giftSubScares = [
-  {
-    count: 5,
-    title: '5 Gifted Subs',
-    description: 'Triggers a scare effect – still active, still evil.'
-  },
-  {
-    count: 10,
-    title: '10 Gifted Subs',
-    description: 'Bigger scare effect – seriously makes us question our life choices.'
-  }
-];
-
-// Pie-to-the-face info
-const pieInfo = {
-  title: '🥧 Pie to the Face',
-  lines: [
-    'Pie to the face is still active!',
-    'When you donate for a pie, you get to choose who takes it: Dad or Willi.',
-    'This will remain available even though the October event has ended.'
-  ]
-};
-
-// Footer note
-const footerNote = {
-  text: 'This page will be updated later in the month with new events, goals, and surprises. Stay tuned!'
-};
-
-
-// ========================
-// RENDER HELPERS
-// ========================
-
-function createElement(tag, className, text) {
-  const el = document.createElement(tag);
-  if (className) el.className = className;
-  if (typeof text === 'string') el.textContent = text;
-  return el;
-}
-
-// Render the main event banner
-function renderCurrentEvent() {
-  const container = document.getElementById('current-event');
-  if (!container) return;
-
-  container.innerHTML = '';
-
-  const titleEl = createElement('h2', 'event-title', currentEvent.title);
-  const subtitleEl = createElement('h3', 'event-subtitle', currentEvent.subtitle);
-
-  container.appendChild(titleEl);
-  container.appendChild(subtitleEl);
-
-  currentEvent.paragraphs.forEach(p => {
-    const pEl = createElement('p', 'event-paragraph', p);
-    container.appendChild(pEl);
-  });
-}
-
-// Render bits scare list
-function renderBitScares() {
-  const container = document.getElementById('bits-scares');
-  if (!container) return;
-
-  container.innerHTML = '';
-
-  const heading = createElement('h3', 'section-title', 'Bits – Scare Alerts (Still Active)');
-  container.appendChild(heading);
-
-  const list = createElement('ul', 'bits-list');
-  bitScares.forEach(item => {
-    const li = createElement('li', 'bits-item');
-    const label = `${item.title}: ${item.description}`;
-    li.textContent = label;
-    list.appendChild(li);
-  });
-
-  container.appendChild(list);
-
-  const note = createElement(
-    'p',
-    'section-note',
-    'These bit alerts are still live and can (and will) scare us on stream.'
-  );
-  container.appendChild(note);
-}
-
-// Render gifted sub scare info
-function renderGiftSubScares() {
-  const container = document.getElementById('gift-sub-scares');
-  if (!container) return;
-
-  container.innerHTML = '';
-
-  const heading = createElement('h3', 'section-title', 'Gifted Subs – Scare Effects');
-  container.appendChild(heading);
-
-  const list = createElement('ul', 'gift-subs-list');
-  giftSubScares.forEach(item => {
-    const li = createElement('li', 'gift-subs-item');
-    const label = `${item.count} Gifted Subs: ${item.description}`;
-    li.textContent = label;
-    list.appendChild(li);
-  });
-
-  container.appendChild(list);
-}
-
-// Render pie info
-function renderPieInfo() {
-  const container = document.getElementById('pie-info');
-  if (!container) return;
-
-  container.innerHTML = '';
-
-  const heading = createElement('h3', 'section-title', pieInfo.title);
-  container.appendChild(heading);
-
-  pieInfo.lines.forEach(line => {
-    const p = createElement('p', 'pie-line', line);
-    container.appendChild(p);
-  });
-}
-
-// Render footer note
-function renderFooterNote() {
-  const container = document.getElementById('event-footer');
-  if (!container) return;
-
-  container.innerHTML = '';
-
-  const p = createElement('p', 'footer-note', footerNote.text);
-  container.appendChild(p);
-}
-
-
-// ========================
-// INIT
-// ========================
-
-document.addEventListener('DOMContentLoaded', () => {
-  renderCurrentEvent();
-  renderBitScares();
-  renderGiftSubScares();
-  renderPieInfo();
-  renderFooterNote();
-});
-
+    <p class="footer-note">
+      This page is maintained by Worth &amp; Willi.  
+      Come hang out with us live on Twitch and TikTok &mdash; and as always, do something with your loved ones. 💙
+    </p>
+  </div>
+</body>
+</html>
