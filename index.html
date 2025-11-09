@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Worth & Willi – Event Info</title>
+  <title>Worth & Willi – Holiday Event Info</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #0b0b10;
-      color: #f5f5f5;
+      background: radial-gradient(circle at top, #1a2740 0, #05060a 55%);
+      color: #fefefe;
       margin: 0;
       padding: 0;
     }
     .page {
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto;
       padding: 2rem 1.5rem 3rem;
     }
@@ -23,118 +23,266 @@
     }
     header h1 {
       margin: 0 0 0.5rem;
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
     header p {
       margin: 0;
-      color: #c4c4c4;
-      font-size: 0.95rem;
+      color: #d5d5e0;
+      font-size: 0.98rem;
     }
     .card {
-      background: #171720;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border: 1px solid #2c2c3a;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      background: rgba(15, 17, 28, 0.95);
+      border-radius: 14px;
+      padding: 1.6rem 1.5rem 1.4rem;
+      margin-bottom: 1.6rem;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent 60%);
+      pointer-events: none;
     }
     .card h2 {
       margin-top: 0;
-      font-size: 1.4rem;
-      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      margin-bottom: 0.7rem;
     }
     .card h3 {
-      margin-top: 0;
-      font-size: 1.1rem;
+      margin-top: 0.4rem;
+      font-size: 1.15rem;
       margin-bottom: 0.5rem;
     }
     p {
-      line-height: 1.5;
+      line-height: 1.6;
       margin: 0.35rem 0;
     }
     ul {
-      padding-left: 1.2rem;
-      margin: 0.5rem 0 0.75rem;
+      padding-left: 1.3rem;
+      margin: 0.4rem 0 0.8rem;
     }
     li {
-      margin: 0.2rem 0;
+      margin: 0.18rem 0;
     }
     .tag {
       display: inline-block;
-      background: #252538;
-      color: #ffcc66;
+      background: linear-gradient(135deg, #e63946, #f6bd60);
+      color: #1b1b22;
       border-radius: 999px;
-      padding: 0.15rem 0.65rem;
-      font-size: 0.75rem;
+      padding: 0.18rem 0.7rem;
+      font-size: 0.76rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.5rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+    .tag-green {
+      background: linear-gradient(135deg, #2ecc71, #a3e635);
+      color: #041006;
+    }
+    .tag-blue {
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      color: #020617;
+    }
+    .bits-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.4rem;
+      font-size: 0.9rem;
+    }
+    .bits-table th,
+    .bits-table td {
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      padding: 0.4rem 0.5rem;
+      text-align: left;
+    }
+    .bits-table th {
+      background: rgba(248, 250, 252, 0.05);
+      font-weight: 600;
+    }
+    .bits-amt {
+      white-space: nowrap;
+      font-weight: 600;
+      color: #facc15;
+    }
+    .highlight {
+      color: #f97316;
+      font-weight: 600;
+    }
+    .goal {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #22c55e;
+    }
+    .festive {
+      color: #facc15;
+      font-weight: 500;
     }
     .footer-note {
       text-align: center;
-      color: #b0b0b8;
-      font-size: 0.9rem;
+      color: #cbd5f5;
+      font-size: 0.92rem;
       margin-top: 1.5rem;
-    }
-    a {
-      color: #5fc8ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="page">
     <header>
-      <h1>Worth &amp; Willi – Event Status</h1>
-      <p>Family-friendly chaos, scares, pies, and good vibes. 🧡</p>
+      <h1>Worth &amp; Willi – Holiday Event &amp; Pies 🎄🥧</h1>
+      <p>Scares, pies, Christmas lights, and chaos… all while keeping it wholesome and family-friendly.</p>
     </header>
 
-    <!-- MAIN EVENT UPDATE -->
+    <!-- FERRIS WHEEL PIE LOGIC -->
     <section class="card">
-      <div class="tag">Event Update</div>
-      <h2>🎃 October Event Is Officially Over</h2>
+      <div class="tag">Pies &amp; Ferris Wheel</div>
+      <h2>🎡 Every 5 Subs = A Ferris Wheel Pie Spin</h2>
       <p>
-        Our October event has wrapped up — thank you all for hanging out with us and making spooky season
-        absolutely wild!
+        For every <span class="highlight">5 total subs</span> (doesn’t matter if it’s
+        <strong>one person dropping 5</strong> or <strong>5 different people dropping 1</strong>),
+        we spin the <strong>Ferris Wheel</strong> to decide who gets a pie to the face.
       </p>
-      <p>
-        Even though the October event is over, some of the chaos is <strong>still live on stream</strong>:
-      </p>
+      <p>The color of the top Ferris wheel pod decides the victim:</p>
       <ul>
-        <li><strong>Bits are still in place</strong> and yes… they <strong>still scare us</strong>.</li>
-        <li>
-          <strong>5 Gifted Subs</strong> and <strong>10 Gifted Subs</strong> still trigger
-          <strong>scare effects</strong>.
-        </li>
-        <li>
-          We still take a <strong>pie to the face</strong> — and the <strong>donator chooses who</strong> gets it
-          (Dad or Willi).
-        </li>
+        <li><span class="festive">Pink Pod</span> – Mom gets a pie. 🥧</li>
+        <li><span class="festive">Blue Pod</span> – Willi gets a pie. 🥧</li>
+        <li><span class="festive">Red Pod</span> – Dad gets a pie. 🥧</li>
+        <li><span class="festive">Green Pod</span> – The <strong>last user to donate a sub</strong> chooses who gets the pie.</li>
       </ul>
       <p>
-        So even outside of October, you can still jump in, drop scares, and keep us on edge every stream. 😂
+        Every 5 subs keeps the wheel spinning… and keeps us all very nervous. 😅
       </p>
     </section>
 
-    <!-- FUTURE UPDATE NOTE -->
+    <!-- BITS & SCARE TRIGGERS -->
     <section class="card">
-      <h2>📆 What’s Next?</h2>
+      <div class="tag tag-blue">Bits &amp; Scare Triggers</div>
+      <h2>💥 Bits – LOUD Scares + Christmas Table</h2>
       <p>
-        We’re going to update this event page <strong>later in the month</strong> with
-        <strong>new events, goals, and rewards</strong>.
+        Bits still trigger events and <strong>VERY LOUD</strong> scare sounds. They also turn on the
+        <strong>Christmas table</strong> for a short time – the higher the bits, the longer the effect.
+      </p>
+
+      <h3>Active Bit Alerts</h3>
+      <table class="bits-table">
+        <thead>
+          <tr>
+            <th>Bits</th>
+            <th>Trigger</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="bits-amt">200</td>
+            <td>Scare alert – loud and sudden, still very active.</td>
+          </tr>
+          <tr>
+            <td class="bits-amt">250</td>
+            <td>Goofy yelling / Minecraft train sound.</td>
+          </tr>
+          <tr>
+            <td class="bits-amt">300</td>
+            <td>Boxing bell – sharp, jarring ring.</td>
+          </tr>
+          <tr>
+            <td class="bits-amt">350</td>
+            <td>Man yelling – jump scare energy.</td>
+          </tr>
+          <tr>
+            <td class="bits-amt">400</td>
+            <td>Donkey squealing, loud laughing – cursed and chaotic.</td>
+          </tr>
+          <tr>
+            <td class="bits-amt">500</td>
+            <td>“Deez Nutz” sound – pure chaos.</td>
+          </tr>
+          <tr>
+            <td class="bits-amt">550</td>
+            <td>“Wake Me Up” meme song – blasts out of nowhere.</td>
+          </tr>
+          <tr>
+            <td class="bits-amt">750</td>
+            <td>Loud snore – perfect for trolling during quiet moments.</td>
+          </tr>
+          <tr>
+            <td class="bits-amt">1000</td>
+            <td>Guy screaming “WAKE UP!” – absolutely destroys peace.</td>
+          </tr>
+          <tr>
+            <td class="bits-amt">2500</td>
+            <td>Train horn plays for a long time – maximum panic.</td>
+          </tr>
+          <tr>
+            <td class="bits-amt">3000</td>
+            <td>Clown circus song – full clown chaos mode.</td>
+          </tr>
+          <tr>
+            <td class="bits-amt">4000</td>
+            <td>iPhone alarm + beat – the most evil combo.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        All of these bit alerts are <strong>very loud</strong>, and every single one will also
+        <span class="festive">activate the Christmas table for a short time</span>.
+      </p>
+    </section>
+
+    <!-- OTHER TRIGGERS: RAIDS, SUPERCHATS, TIKTOK GIFTS -->
+    <section class="card">
+      <div class="tag tag-green">Lights &amp; Christmas Table</div>
+      <h2>🎄 Raids, Superchats &amp; TikTok Gifts</h2>
+
+      <h3>Raids</h3>
+      <p>
+        🎁 <strong>All raids</strong> trigger the <strong>Christmas lights</strong> and the
+        <strong>Christmas table</strong> to turn on and celebrate the incoming community.
+      </p>
+
+      <h3>YouTube Superchats</h3>
+      <p>
+        💬 Any <strong>Superchat of $1 or more</strong> on YouTube will
+        <strong>trigger the Christmas table and lights</strong>.
+      </p>
+
+      <h3>TikTok Gifts</h3>
+      <p>
+        🎁 <strong>TikTok gifts</strong> also join the party:
+      </p>
+      <ul>
+        <li><strong>100 gifts</strong> – triggers the Christmas table.</li>
+        <li><strong>500 gifts</strong> – triggers the Christmas table.</li>
+        <li><strong>1000 gifts</strong> – triggers the Christmas table.</li>
+      </ul>
+      <p>
+        For every <span class="highlight">3 Galaxys</span> on TikTok,
+        that also equals <strong>one pie</strong> – and we spin the Ferris Wheel again.
+        Whoever the top pod color lands on must take the pie. 🎡🥧
+      </p>
+    </section>
+
+    <!-- BIG GOAL -->
+    <section class="card">
+      <div class="tag">Monthly Goal</div>
+      <h2>⭐ Big Holiday Goal</h2>
+      <p class="goal">
+        If we reach <strong>1000 subs this month</strong>, Dad will do another
+        <strong>24–48 hour marathon stream</strong>.
       </p>
       <p>
-        Keep an eye on this page (and our streams) for the next round of chaos, challenges, and wholesome
-        moments with the Worth &amp; Willi community. 💙
+        That means more games, more scares, more pies, more Christmas lights, and plenty of time
+        to hang out with the whole Worth &amp; Willi family.
       </p>
     </section>
 
     <p class="footer-note">
-      This page is maintained by Worth &amp; Willi.  
-      Come hang out with us live on Twitch and TikTok &mdash; and as always, do something with your loved ones. 💙
+      This page is updated as our events evolve.  
+      Thank you for all the support — and as always, do something with your loved ones. 💙
     </p>
   </div>
 </body>
