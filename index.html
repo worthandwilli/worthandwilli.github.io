@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Worth & Willi – Holiday Event Info</title>
+  <title>Worth & Willi – Event Info</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
@@ -40,13 +40,6 @@
       position: relative;
       overflow: hidden;
     }
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent 60%);
-      pointer-events: none;
-    }
     .card h2 {
       margin-top: 0;
       font-size: 1.5rem;
@@ -57,17 +50,10 @@
       font-size: 1.15rem;
       margin-bottom: 0.5rem;
     }
-    p {
-      line-height: 1.6;
-      margin: 0.35rem 0;
-    }
-    ul {
-      padding-left: 1.3rem;
-      margin: 0.4rem 0 0.8rem;
-    }
-    li {
-      margin: 0.18rem 0;
-    }
+    p { line-height: 1.6; margin: 0.35rem 0; }
+    ul { padding-left: 1.3rem; margin: 0.4rem 0 0.8rem; }
+    li { margin: 0.18rem 0; }
+
     .tag {
       display: inline-block;
       background: linear-gradient(135deg, #e63946, #f6bd60);
@@ -80,48 +66,12 @@
       margin-bottom: 0.6rem;
       font-weight: 600;
     }
-    .tag-green {
-      background: linear-gradient(135deg, #2ecc71, #a3e635);
-      color: #041006;
-    }
-    .tag-blue {
-      background: linear-gradient(135deg, #38bdf8, #6366f1);
-      color: #020617;
-    }
-    .bits-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 0.4rem;
-      font-size: 0.9rem;
-    }
-    .bits-table th,
-    .bits-table td {
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      padding: 0.4rem 0.5rem;
-      text-align: left;
-    }
-    .bits-table th {
-      background: rgba(248, 250, 252, 0.05);
-      font-weight: 600;
-    }
-    .bits-amt {
-      white-space: nowrap;
-      font-weight: 600;
-      color: #facc15;
-    }
-    .highlight {
-      color: #f97316;
-      font-weight: 600;
-    }
-    .goal {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #22c55e;
-    }
-    .festive {
-      color: #facc15;
-      font-weight: 500;
-    }
+    .tag-green { background: linear-gradient(135deg, #2ecc71, #a3e635); color: #041006; }
+    .tag-blue { background: linear-gradient(135deg, #38bdf8, #6366f1); color: #020617; }
+
+    .highlight { color: #f97316; font-weight: 600; }
+    .festive { color: #facc15; font-weight: 500; }
+
     .footer-note {
       text-align: center;
       color: #cbd5f5;
@@ -130,138 +80,76 @@
     }
   </style>
 </head>
+
 <body>
-  <div class="page">
-    <header>
-      <h1>Worth &amp; Willi – Event Info &amp; Pies 🎄🥧</h1>
-      <p>Scares, pies, lights, and chaos… all while keeping it wholesome and family-friendly.</p>
-    </header>
+<div class="page">
 
-    <!-- UPDATED: EVENT WINDOW / MAIN RULES -->
-    <section class="card">
-      <div class="tag tag-green">Event Dates &amp; Pie Rules</div>
-      <h2>📅 Starting July 22nd through the 27th</h2>
-      <p>
-        From <span class="highlight">July 22nd through July 27th</span>, we’re running our
-        <strong>pie-to-the-face event</strong> across platforms. If an event triggers a pie, the wheel stops and we find out who’s getting hit. 😅🥧
-      </p>
+  <header>
+    <h1>Worth &amp; Willi – Event Info &amp; Pies 🥧</h1>
+    <p>Chaos, laughs, scares, and pies — always wholesome, always family-friendly.</p>
+  </header>
 
-      <h3>🥧 Updated Pie Triggers</h3>
-      <ul>
-        <li><strong>Every 3 gifted subs</strong> = <span class="highlight">1 pie</span></li>
-        <li><strong>8 gifted subs</strong> = <span class="highlight">3 pies</span></li>
-        <li><strong>Every 2 TikTok Galaxys</strong> = <span class="highlight">1 pie to the face</span></li>
-        <li><strong>Every 3 gifted YouTube memberships</strong> = <span class="highlight">1 pie to the face</span></li>
-      </ul>
-
-      <p class="festive">
-        🔊 New sound alerts will be added within a few days — stay ready. 😅
-      </p>
-    </section>
-
-    <!-- FERRIS WHEEL PIE LOGIC -->
-    <section class="card">
-      <div class="tag">Pies &amp; Ferris Wheel</div>
-      <h2>🎡 The Wheel Is Always Spinning</h2>
-      <p>
-        The Ferris Wheel is now <strong>always spinning</strong> to keep it truly random — you never know who it’s going to land on.
-        When events trigger it, the wheel <strong>stops</strong> and whoever it lands on is the result. 🎡
-      </p>
-      <p>The color of the top Ferris wheel pod decides the victim:</p>
-      <ul>
-        <li><span class="festive">Pink Pod</span> – Mom gets a pie. 🥧</li>
-        <li><span class="festive">Blue Pod</span> – Willi gets a pie. 🥧</li>
-        <li><span class="festive">Red Pod</span> – Dad gets a pie. 🥧</li>
-        <li>
-          <span class="festive">Green Pod</span> – The
-          <strong>last user to trigger the pie</strong> chooses who gets the pie.
-        </li>
-      </ul>
-
-      <p>
-        Big gifts = big mess. We regret everything already. 😅
-      </p>
-    </section>
-
-    <!-- BITS & SCARE TRIGGERS -->
-    <section class="card">
-      <div class="tag tag-blue">Bits &amp; Scare Triggers</div>
-      <h2>💥 Bits – LOUD Scares + Christmas Table</h2>
-      <p>
-        Bits still trigger events and <strong>VERY LOUD</strong> scare sounds. They also turn on the
-        <strong>Christmas table</strong> for a short time – the higher the bits, the longer the effect.
-      </p>
-
-      <h3>Active Bit Alerts</h3>
-      <table class="bits-table">
-        <thead>
-          <tr>
-            <th>Bits</th>
-            <th>Trigger</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="bits-amt">200</td><td>Scare alert – loud and sudden, still very active.</td></tr>
-          <tr><td class="bits-amt">250</td><td>Goofy yelling / Minecraft train sound.</td></tr>
-          <tr><td class="bits-amt">300</td><td>Boxing bell – sharp, jarring ring.</td></tr>
-          <tr><td class="bits-amt">350</td><td>Man yelling – jump scare energy.</td></tr>
-          <tr><td class="bits-amt">400</td><td>Donkey squealing, loud laughing – cursed and chaotic.</td></tr>
-          <tr><td class="bits-amt">500</td><td>“Deez Nutz” sound – pure chaos.</td></tr>
-          <tr><td class="bits-amt">550</td><td>“Wake Me Up” meme song – blasts out of nowhere.</td></tr>
-          <tr><td class="bits-amt">750</td><td>Loud snore – perfect for trolling during quiet moments.</td></tr>
-          <tr><td class="bits-amt">1000</td><td>Guy screaming “WAKE UP!” – absolutely destroys peace.</td></tr>
-          <tr><td class="bits-amt">2500</td><td>Train horn plays for a long time – maximum panic.</td></tr>
-          <tr><td class="bits-amt">3000</td><td>Clown circus song – full clown chaos mode.</td></tr>
-          <tr><td class="bits-amt">4000</td><td>iPhone alarm + beat – the most evil combo.</td></tr>
-        </tbody>
-      </table>
-
-      <p>
-        All of these bit alerts are <strong>very loud</strong>, and every single one will also
-        <span class="festive">activate the Christmas table for a short time</span>.
-      </p>
-    </section>
-
-    <!-- OTHER TRIGGERS: RAIDS, SUPERCHATS, TIKTOK GIFTS -->
-    <section class="card">
-      <div class="tag tag-green">Lights &amp; Christmas Table</div>
-      <h2>🎄 Raids, Superchats &amp; TikTok Gifts</h2>
-
-      <h3>Raids</h3>
-      <p>
-        🎁 <strong>All raids</strong> trigger the <strong>Christmas lights</strong> and the
-        <strong>Christmas table</strong> to turn on and celebrate the incoming community.
-      </p>
-
-      <h3>YouTube Superchats</h3>
-      <p>
-        💬 Any <strong>Superchat of $1 or more</strong> on YouTube will
-        <strong>trigger the Christmas table and lights</strong>.
-      </p>
-
-      <h3>TikTok Gifts</h3>
-      <p>
-        🎁 <strong>TikTok gifts</strong> also join the party:
-      </p>
-      <ul>
-        <li><strong>100 gifts</strong> – triggers the Christmas table.</li>
-        <li><strong>500 gifts</strong> – triggers the Christmas table.</li>
-        <li><strong>1000 gifts</strong> – triggers the Christmas table.</li>
-      </ul>
-      <p>
-        <strong>Reminder:</strong> Every <span class="highlight">2 Galaxys</span> on TikTok equals
-        <strong>one pie to the face</strong> — and we stop the Ferris Wheel to see who takes it. 🎡🥧
-      </p>
-      <p>
-        Every <span class="highlight">3 gifted YouTube memberships</span> also equals
-        <strong>one pie to the face</strong>. 🥧
-      </p>
-    </section>
-
-    <p class="footer-note">
-      This page is updated as our events evolve.  
-      Thank you for all the support — and as always, do something with your loved ones. 💙
+  <!-- 24 HOUR STREAM (RESTORED) -->
+  <section class="card">
+    <div class="tag tag-green">24 Hour Stream</div>
+    <h2>🎄 24 Hour Christmas With Dad Stream</h2>
+    <p>
+      We’re doing a <strong>24-hour Christmas stream</strong> starting
+      <span class="highlight">Monday the 22nd at 7:00 PM EST</span> and going through
+      <strong>Tuesday the 23rd</strong>.
     </p>
-  </div>
+    <ul>
+      <li>🍪 Baking cookies live on stream</li>
+      <li>🏠 Gingerbread house competition</li>
+      <li>🎡 Pies, wheel stops, and chaos throughout</li>
+      <li>🔊 New sound alerts being added within a few days</li>
+    </ul>
+    <p>
+      Come hang out for part of it or all of it — sleep is optional. 😅💙
+    </p>
+  </section>
+
+  <!-- EVENT WINDOW & PIE RULES -->
+  <section class="card">
+    <div class="tag tag-green">Event Window &amp; Pie Rules</div>
+    <h2>📅 July 22nd – July 27th</h2>
+    <p>
+      From <span class="highlight">July 22nd through July 27th</span>, we’re running
+      <strong>pie-to-the-face events</strong> across all platforms.
+      When a pie is triggered, the Ferris Wheel stops and decides the victim. 🎡🥧
+    </p>
+
+    <h3>🥧 Pie Triggers</h3>
+    <ul>
+      <li><strong>Every 3 gifted subs</strong> = 1 pie</li>
+      <li><strong>8 gifted subs</strong> = 3 pies</li>
+      <li><strong>Every 2 TikTok Galaxys</strong> = 1 pie to the face</li>
+      <li><strong>Every 3 gifted YouTube memberships</strong> = 1 pie to the face</li>
+    </ul>
+  </section>
+
+  <!-- FERRIS WHEEL -->
+  <section class="card">
+    <div class="tag">Ferris Wheel Logic</div>
+    <h2>🎡 The Wheel Is Always Spinning</h2>
+    <p>
+      The Ferris Wheel is <strong>always spinning</strong> to keep things truly random.
+      When an event triggers it, the wheel stops — and whoever it lands on takes the pie.
+    </p>
+    <ul>
+      <li><span class="festive">Pink</span> – Mom 🥧</li>
+      <li><span class="festive">Blue</span> – Willi 🥧</li>
+      <li><span class="festive">Red</span> – Dad 🥧</li>
+      <li><span class="festive">Green</span> – Triggering user chooses 🥧</li>
+    </ul>
+    <p>Big gifts = big mess. We regret nothing. 😅</p>
+  </section>
+
+  <p class="footer-note">
+    This page is updated as events evolve.  
+    Thank you for all the support — and as always, do something with your loved ones. 💙
+  </p>
+
+</div>
 </body>
 </html>
