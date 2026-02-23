@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Worth & Willi Server Guide</title>
-  <meta name="description" content="Worth & Willi Minecraft Server Guide – quests, commands, VIP perks, rules, mods, and world map." />
+  <meta name="description" content="Worth & Willi Minecraft Server Guide – quests, commands, VIP perks, rules, client mods, and world map." />
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -36,30 +36,26 @@
 
 <main class="wrap">
 
-<!-- WELCOME -->
+<!-- START -->
 <section id="start" class="card">
   <h2>Welcome</h2>
-
   <p>
     Welcome to the Worth & Willi Minecraft Server.
-    This guide explains the <b>main questline order</b>,
-    <b>helpful commands</b>, <b>supporter perks</b>,
-    <b>rules</b>, and <b>client-side mod policy</b>.
+    This guide explains the <b>main questline order</b>, <b>helpful commands</b>,
+    <b>supporter perks</b>, and important server rules.
   </p>
 
   <div class="callouts">
     <div class="pill"><code>/quests</code> → quest menu</div>
     <div class="pill"><code>/mcmmogui</code> → mcMMO GUI</div>
     <div class="pill"><code>/jobs</code> → Jobs GUI</div>
-    <div class="pill"><code>/graves tp</code> → return to your grave</div>
+    <div class="pill"><code>/graves tp</code> → teleport to your grave</div>
     <div class="pill">🌍 <a href="https://map.wwminecraft.com" target="_blank">map.wwminecraft.com</a></div>
   </div>
 
   <p class="note">
-    If this guide doesn’t cover your issue, or you experience a bug, player issue,
-    or need staff assistance, the <b>only official way</b> to get help is by submitting
-    a ticket in Discord under <b>Help & Feedback</b>.
-    Personal cases will not be discussed in public channels.
+    If something doesn’t work, make sure your Discord account is linked and that you
+    completed the required quest steps.
   </p>
 </section>
 
@@ -70,44 +66,46 @@
   <ol class="steps">
     <li>
       <b>Spawn Introduction</b><br>
-      Speak with NPCs in this exact order at spawn:
+      Talk to NPCs in this exact order in spawn:
       <br><code>Queen → Mag → Bear → Derrick</code>
     </li>
 
     <li>
       <b>Travel to Oasis</b><br>
-      After Derrick, teleport using <code>John McDonald</code>.
+      After Derrick, teleport to the Oasis using
+      <code>John McDonald</code>.
     </li>
 
     <li>
       <b>Oasis Hub</b><br>
-      The Oasis is the main progression hub where you can:
+      This is the main hub area where you can:
       <ul>
-        <li>Exchange Coins / ProCoins for cosmetics</li>
+        <li>Exchange coins for cosmetics</li>
         <li>Pick up quests that reward money</li>
       </ul>
     </li>
 
     <li>
       <b>Oasis Questline</b><br>
-      Open <code>/quests</code> and complete all quests in the
-      <b>Oasis</b> category.  
-      <b>All of Ash’s quests must be completed.</b>
+      Open quests with <code>/quests</code> and go to the
+      <b>Oasis</b> category.
+      You must complete <b>all of Ash’s quests</b>.
     </li>
 
     <li>
       <b>PirateBay Unlock</b><br>
       Completing Ash’s quests unlocks PirateBay.
-      Use <code>Captain Snorebeard</code> on the ship near spawn.
+      Travel there from the ship near spawn using
+      <code>Captain Snorebeard</code>.
     </li>
 
     <li>
       <b>Endgame Hub</b><br>
-      After PirateBay you’ll gain access to the endgame hub:
+      After PirateBay, you’ll gain access to the endgame hub:
       <ul>
-        <li>Pillager-filled island</li>
-        <li>Endgame quests & activities</li>
-        <li>Minigames and casino</li>
+        <li>Island filled with pillagers</li>
+        <li>Fun games & repeatable quests</li>
+        <li>Casino and endgame activities</li>
       </ul>
     </li>
   </ol>
@@ -117,208 +115,380 @@
   </div>
 </section>
 
-<!-- MAP -->
+<!-- WORLD MAP -->
 <section id="map" class="card">
   <h2>World Map (BlueMap)</h2>
 
   <p>
-    Use the live world map to explore terrain, locate builds,
-    plan travel routes, and discover points of interest.
+    We strongly recommend using the live world map to explore the server,
+    locate builds, find biomes, and plan large projects.
   </p>
 
   <div class="banner">
-    🌍 <b>Live Map:</b>
+    🌍 <b>Live World Map:</b>
     <a href="https://map.wwminecraft.com" target="_blank">map.wwminecraft.com</a>
   </div>
 
   <ul>
-    <li>Powered by the BlueMap plugin</li>
-    <li>Updates in real time</li>
-    <li>Some locations may be hidden for balance or privacy</li>
+    <li>Powered by the <b>BlueMap</b> plugin</li>
+    <li>View terrain, builds, and structures in real time</li>
+    <li>Works on desktop and mobile</li>
   </ul>
 </section>
 
 <!-- COMMANDS -->
 <section id="commands" class="card">
   <h2>Helpful Commands</h2>
-
   <p class="note">
     Searchable list of commonly used player commands.
-    <br>
-    💀 Died? Use <code>/graves tp</code> to teleport back to your gravestone.
+    <br><b>Death recovery:</b> use <code>/graves tp</code> to teleport back to your gravestone.
   </p>
-
   <input id="cmdSearch" type="text" placeholder="Search commands..." />
   <div id="cmdGrid" class="grid"></div>
-
-  <p class="note">
-    If a command isn’t working, it may require Discord linking
-    or a specific rank.
-  </p>
+  <p class="note">If a command isn’t working, it may require Discord linking or a specific rank.</p>
 </section>
 
-<!-- PERKS -->
+<!-- SUPPORTER PERKS (DETAILED LINKS PRESERVED) -->
 <section id="perks" class="card">
   <h2>Supporter Perks</h2>
   <p class="note">Some perks require Discord linking.</p>
 
   <div class="grid two">
-    <div class="plugcat">
-      <h3>All VIP</h3>
-      <ul>
-        <li>Money when linking VIP to Discord</li>
-        <li>GradientPlus VIP name & chat color</li>
-        <li><code>/trash</code> / <code>/garbage</code></li>
-        <li><code>/boop</code>, <code>/bfc</code>, <code>/shrug</code></li>
-        <li>VeinMiner, XP Bottling, gSit</li>
-        <li>NoLocatorBar enabled</li>
-      </ul>
-    </div>
 
     <div class="plugcat">
-      <h3>Lil Willies & Above</h3>
+      <h3>Lil Willies &amp; Above</h3>
       <ul>
-        <li>SimpleVoiceChat (proximity voice)</li>
+        <li><b>SimpleVoiceChat</b> — proximity voice chat inside Minecraft</li>
       </ul>
     </div>
 
     <div class="plugcat">
       <h3>Big Willies</h3>
       <ul>
-        <li><code>/shushwand</code> mob silencer</li>
-        <li>ShapelessPortals</li>
-        <li>Phantom spawning disabled</li>
+        <li>
+          <b>Shut The Cluck Up</b> —
+          <a href="https://modrinth.com/plugin/shut-the-cluck-up" target="_blank">Modrinth</a><br>
+          <code>/shushwand</code> to get the shush wand. Right/Left click mobs to silence them.
+        </li>
+        <li>
+          <b>ShapelessPortals</b> —
+          <a href="https://modrinth.com/plugin/shapeless-portals" target="_blank">Modrinth</a><br>
+          Both crying obsidian and normal obsidian are valid portal blocks.
+        </li>
+        <li>
+          <b>PhantomSetings</b> —
+          <a href="https://www.spigotmc.org/resources/phantomsetings.132520/" target="_blank">Spigot</a><br>
+          Phantom spawning is turned off for the player.
+        </li>
       </ul>
     </div>
 
     <div class="plugcat">
       <h3>SuperWillies</h3>
       <ul>
-        <li><code>/hdb</code> (heads may not be sold/traded)</li>
-        <li><code>/nv</code> Night Vision</li>
-        <li><code>/as</code> AutoSmelt</li>
+        <li>
+          <b>HeadDatabase</b> —
+          <a href="https://www.spigotmc.org/resources/head-database.14280/" target="_blank">Spigot</a><br>
+          <code>/hdb</code> to open up the Head Database.
+          Heads are not allowed to be sold/traded for profit.
+        </li>
+        <li>
+          <b>NightVision</b> —
+          <a href="https://modrinth.com/plugin/nightvision-plugin?version=1.21.8&loader=paper" target="_blank">Modrinth</a><br>
+          <code>/nv</code> to toggle Night Vision
+        </li>
+        <li>
+          <b>AutoSmelt</b> —
+          <a href="https://www.spigotmc.org/resources/autosmelt.71576/" target="_blank">Spigot</a><br>
+          <code>/as</code> to toggle AutoSmelt when mining
+        </li>
       </ul>
     </div>
 
     <div class="plugcat">
-      <h3>Discord Boosters</h3>
+      <h3>VIP Extras (VIP + Discord Linking Bonus)</h3>
       <ul>
-        <li>BetterMending</li>
-        <li><code>/fly</code> inside your own claims</li>
+        <li>
+          <b>gSit</b> —
+          <a href="https://hangar.papermc.io/Gecolay/GSit" target="_blank">Hangar</a><br>
+          Visit the mod page above for all specific commands
+        </li>
+        <li>
+          <b>XPBottling</b> —
+          <a href="https://modrinth.com/plugin/xp-bottling" target="_blank">Modrinth</a><br>
+          Right-click an enchanting table with a glass bottle to convert your XP into an experience bottle.
+          Bottling XP costs 7 experience points per bottle.
+          (Note: 7 XP points is the average amount of experience an experience bottle will give when thrown, as it drops 3–11 points.)
+        </li>
+        <li>
+          <b>Veinminer</b> —
+          <a href="https://modrinth.com/datapack/veinminer?version=1.21.11&loader=paper" target="_blank">Modrinth</a><br>
+          <code>/veinminer toggle</code> to completely toggle Veinminer
+        </li>
+        <li>
+          <b>Shrug</b> —
+          <a href="https://www.spigotmc.org/resources/shrug-¯-_-ツ-_-¯.20167/" target="_blank">Spigot</a><br>
+          <code>/shrug</code> in game chat
+        </li>
+        <li>
+          <b>NoLocatorBar</b> —
+          <a href="https://modrinth.com/plugin/nolocatorbar?version=1.21.11&loader=paper" target="_blank">Modrinth</a><br>
+          Replaces the locator bar with the XP bar and makes the player not visible on other players locator bars
+        </li>
+        <li>
+          <b>GradientPlus + GUI 💵</b> —
+          <a href="https://builtbybit.com/resources/gradientplus-chat-name-gui.28915/?ref=discover" target="_blank">BuiltByBit</a><br>
+          Grants all VIP a special name and chat color (same for all VIP players)
+        </li>
+        <li>
+          <b>Garbage</b> —
+          <a href="https://modrinth.com/plugin/garbage" target="_blank">Modrinth</a><br>
+          <code>/trash</code> or <code>/garbage</code> to open a remote trash bin
+        </li>
+        <li>
+          <b>Boop</b> —
+          <a href="https://modrinth.com/plugin/boop" target="_blank">Modrinth</a><br>
+          <code>/boop &lt;player_username&gt;</code> to "boop" other players
+        </li>
+        <li>
+          <b>BanFromClaim</b> —
+          <a href="https://modrinth.com/plugin/banfromclaim" target="_blank">Modrinth</a><br>
+          <code>/bfc &lt;player_username&gt;</code> while standing inside one of your own claims to banish them from entering
+        </li>
       </ul>
     </div>
+
+    <div class="plugcat">
+      <h3>Discord Server Boosters</h3>
+      <ul>
+        <li>
+          <b>BetterMending</b> —
+          <a href="https://modrinth.com/plugin/better-mending" target="_blank">Modrinth</a><br>
+          Shift + right click while holding a broken tool/armor to repair it using XP from your XP bar
+        </li>
+        <li>
+          <b>ClaimFly (GriefPrevention Addon)</b> —
+          <a href="https://www.spigotmc.org/resources/claimfly-griefprevention-addon.122058/" target="_blank">Spigot</a><br>
+          Grants the player <code>/fly</code> inside their own claims
+        </li>
+      </ul>
+    </div>
+
+    <div class="plugcat">
+      <h3>Discord Ranked Community Members</h3>
+      <ul>
+        <li>Special community rank perks (see Discord announcements)</li>
+        <li>Recognition + extra community benefits</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
-<!-- RULES -->
+<!-- RULES (SHORTENED ONLY – AS REQUESTED EARLIER) -->
 <section id="rules" class="card">
   <h2>Server Rules</h2>
 
-  <div class="banner">⚠️ Zero Tolerance — Instant Ban, No Warnings</div>
+  <div class="banner">
+    ⚠️ Zero Tolerance — Instant Ban, No Warnings
+  </div>
 
-  <h3>Chat & Conduct</h3>
+  <h3>Chat & Communication</h3>
   <ul>
-    <li>Be respectful, helpful, and kind</li>
-    <li>No swearing, hate speech, bullying, harassment, or threats</li>
-    <li>No spam, excessive caps, or attention-seeking behavior</li>
-    <li>No advertising servers or social media</li>
-    <li>English only in public chats</li>
-    <li>Do not mention staff unless reporting SMP downtime</li>
-    <li>Do not impersonate staff or discuss bans publicly</li>
+    <li>Be kind, helpful, and respectful.</li>
+    <li>No swearing/bad language, hate speech, bullying, threats, or harassment.</li>
+    <li>No spam or excessive caps.</li>
+    <li>No advertising other servers, social media, or YouTube channels.</li>
+    <li>English only in public chat so everyone can understand.</li>
+    <li>Do not mention staff (only exception: reporting SMP downtime).</li>
+    <li>Do not impersonate staff or “police” other players.</li>
+    <li>Do not discuss bans/past offenses publicly (Minecraft, Discord, or streams).</li>
   </ul>
 
-  <h3>Gameplay</h3>
+  <h3>In-Game Rules</h3>
   <ul>
-    <li>No griefing, stealing, or inappropriate builds</li>
-    <li>Claim land using a golden shovel</li>
-    <li>No touching others’ farms, animals, or claims</li>
-    <li>PvP only by mutual agreement or in minigames</li>
-    <li>No hacks, cheats, x-ray, or bug abuse</li>
+    <li>No griefing and no stealing.</li>
+    <li>No inappropriate builds (offensive symbols, words, etc.).</li>
+    <li>Don’t build too close to others without permission.</li>
+    <li>Use a golden shovel to claim and protect your land/chests.</li>
+    <li>Don’t touch other players’ farms, animals, or claimed areas.</li>
+    <li>No begging or asking for handouts.</li>
+  </ul>
+
+  <h3>PvP & Exploits</h3>
+  <ul>
+    <li>PvP only if all players agree (or in BedWars/minigames).</li>
+    <li>No traps, trolling, or tricks that harm others.</li>
+    <li>No hacks, cheats, x-ray, or unauthorized mods.</li>
+    <li>Report bugs/glitches to staff — do not abuse them.</li>
   </ul>
 
   <h3>Staff & Enforcement</h3>
   <ul>
-    <li>Follow staff instructions</li>
-    <li>Report issues via Discord tickets</li>
-    <li>Lying to staff or bypassing systems is not allowed</li>
+    <li>Follow admin/mod instructions.</li>
+    <li>Report rule-breaking instead of trying to handle it yourself.</li>
+    <li>Lying to staff or trying to trick the system is not allowed.</li>
   </ul>
 
   <p class="note">
-    We play together, not against each other.
-    Everyone is welcome.
+    We play together, not against each other. Everyone is welcome — no matter background or skill level.
   </p>
+
+  <h3>Discord Rules (Required)</h3>
+  <p class="note">Even though we have our own rules, everyone is also REQUIRED to follow Discord’s rules:</p>
+  <ul>
+    <li><a href="https://discordapp.com/terms" target="_blank">Discord Terms of Service</a></li>
+    <li><a href="https://discordapp.com/guidelines" target="_blank">Discord Community Guidelines</a></li>
+    <li><a href="https://support.discord.com/hc/en-us/articles/360024871991-Discord-Partnership-Code-of-Conduct" target="_blank">Discord Partnership Code of Conduct</a></li>
+  </ul>
 </section>
 
-<!-- MODS -->
+<!-- CLIENT MODS (FULL LISTS – NOT SHORTENED) -->
 <section id="mods" class="card">
   <h2>Client-Side Mods Policy</h2>
 
-  <h3>✅ Authorized (Non-Performance Only)</h3>
+  <h3>✅ Authorized (non-performance only)</h3>
   <ul>
-    <li>Apple Skin, Better Third Person, Block Meter, Blur+</li>
-    <li>Bridging Mod, Chat Heads, Client Tweaks, Death Log</li>
-    <li>Distant Horizons, Eating Animation, Effect Timer Plus</li>
-    <li>Extreme Sound Muffler, First-Person Model</li>
-    <li>Flight Assistant, Fresh Animations, Full Bright</li>
-    <li>Inventory Essentials, Inv Move, Iris (Shaders)</li>
-    <li>Elytra Swap, Lighty, Litematica</li>
-    <li>More Chat History, Overflowing Bars, Resourcify</li>
-    <li>RRLS, Shulkerbox Tooltips, Thorough Keybindings</li>
-    <li>Toggle Nametags, Minimap / Worldmap Mods</li>
-    <li>Zoom Mods, 3D Skin Layers</li>
+    <li>Apple Skin</li>
+    <li>Better Third Person</li>
+    <li>Block Meter</li>
+    <li>Blur+</li>
+    <li>Bridging Mod</li>
+    <li>Chat Heads</li>
+    <li>Client Tweaks</li>
+    <li>Death Log</li>
+    <li>Distant Horizons</li>
+    <li>Eating Animation</li>
+    <li>Effect Timer Plus</li>
+    <li>Extreme Sound Muffler</li>
+    <li>First-Person Model</li>
+    <li>Flight Assistant</li>
+    <li>Fresh Animations</li>
+    <li>Full Bright</li>
+    <li>Inventory Essentials</li>
+    <li>Inv Move</li>
+    <li>Iris (Shaders)</li>
+    <li>Elytra Swap</li>
+    <li>Lighty</li>
+    <li>Litematica</li>
+    <li>More Chat History</li>
+    <li>Overflowing Bars</li>
+    <li>Resourcify</li>
+    <li>RRLS</li>
+    <li>Shulkerbox Tooltips</li>
+    <li>Thorough Keybindings</li>
+    <li>Toggle Nametags</li>
+    <li>Minimaps &amp; Worldmaps</li>
+    <li>Zoomify (or other Zoom mods)</li>
+    <li>3D Skin Layers</li>
   </ul>
 
-  <h3>🚫 Prohibited (Any Variant)</h3>
+  <h3>🚫 Prohibited (any variant)</h3>
   <ul>
-    <li>Anti-AFK bypass, Auto Clickers, Auto Fishing</li>
-    <li>Auto Logout (PvP), Auto Reconnect</li>
-    <li>Damage Evasion, AI Mods (Baritone)</li>
+    <li>Anti-AFK bypass</li>
+    <li>Auto Clicker</li>
+    <li>Auto Logout (PvP)</li>
+    <li>Auto Reconnect</li>
+    <li>Auto Fishing</li>
+    <li>Damage Evasion</li>
+    <li>AI-based Mods (e.g., Baritone)</li>
     <li>Auto Chat / Auto Response</li>
     <li>Macros simulating prohibited actions</li>
-    <li>Freecam, Replay Mod</li>
+    <li>Freecam / Replay Mod</li>
   </ul>
 
   <div class="banner">
-    ⚠️ Unauthorized mods may result in warnings, kicks, or bans.
+    ⚠️ Using unauthorized or prohibited mods may result in warnings, kicks, or bans.
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ (FULL – WITH YOUR NEW KEEP INVENTORY ENTRY ADDED) -->
 <section id="faq" class="card">
   <h2>FAQ</h2>
 
   <details>
-    <summary>Is Keep Inventory on?</summary>
-    No. Keep Inventory is off.  
-    We use a Graves system that creates a headstone on death.
-    Use <code>/graves tp</code> to teleport back.
-    Items must be collected within <b>48 hours</b>.
+    <summary>What if this guide doesn’t cover my issue, I find a glitch, or I need admin help?</summary>
+    If you encounter a bug/glitch, issues with another player, or need assistance from an admin,
+    the <b>only official way</b> to get proper help is by submitting a <b>new ticket</b> in Discord under
+    <b>Help &amp; Feedback</b>. Personal cases will not be discussed in public/general channels.
   </details>
 
   <details>
-    <summary>How do I earn money?</summary>
-    Through <code>/jobs</code> and quests found in Oasis and PirateBay.
+    <summary>How can I earn money in the server?</summary>
+    Money is earned mainly through <code>/jobs</code> and certain quests found only in the
+    <b>Oasis</b> and <b>PirateBay</b> areas.
   </details>
 
   <details>
     <summary>What are Coins / ProCoins?</summary>
-    Cosmetic currency earned from 1400+ quests.
-    Can be exchanged for eco money, but not intended as a main income source.
+    Coins (sometimes called ProCoins) are the currency used to buy cosmetics.
+    They can be earned by a variety of <b>1400+ quests</b>.
+    They can also be exchanged for normal eco currency.
+  </details>
+
+  <details>
+    <summary>Why is the exchange rate from Coins to money worse?</summary>
+    Because this is not intended to be a main source of income.
+    The economy is meant to be driven by players rather than questing/conversion.
+  </details>
+
+  <details>
+    <summary>Is Keep Inventory on?</summary>
+    No. Keep Inventory is off — but we have Graves that drop headstones.
+    The easiest way to recover your items is <code>/graves tp</code> to teleport back to your gravestone.
+    There is a <b>48 hour</b> timer to collect your items before they are completely gone.
   </details>
 
   <details>
     <summary>Why can’t everyone use proximity chat?</summary>
-    It’s reserved for trusted Discord members ranked Big Willi or higher.
+    This is given to our trusted Discord community members that have received a rank of <b>Big Willi</b> or above.
   </details>
 
   <details>
-    <summary>Can I be unbanned?</summary>
-    Unlikely. Bans are usually final.
+    <summary>How do I get ranked in Discord?</summary>
+    This is only given out by Worth and Willi and it’s recognized by activeness, time, respect,
+    and generally getting to know someone before letting them get close to the family-type vibe.
+    Best to stay active, stay pleasant, and be surprised when it happens. It won’t happen quickly.
   </details>
 
   <details>
-    <summary>Can we make factions or PvP freely?</summary>
-    No. This is a family-friendly server with limited PvP.
+    <summary>Can I be unbanned if I was banned?</summary>
+    Unlikely. Bans are usually final. Don’t break the rules.
+  </details>
+
+  <details>
+    <summary>Can we make factions and rule land / PvP others?</summary>
+    No — this is a family-friendly server with limited PvP only mutually agreed upon and/or in BedWars or a minigame.
+  </details>
+
+  <details>
+    <summary>How do I start the main storyline?</summary>
+    Go to spawn and talk to <b>Queen → Mag → Bear → Derrick</b>, then use <b>John McDonald</b> to reach the Oasis.
+  </details>
+
+  <details>
+    <summary>How do I access PirateBay?</summary>
+    Finish <b>all of Ash’s Oasis quests</b> via <code>/quests</code>. Captain Snorebeard (ship near spawn) will then teleport you.
+  </details>
+
+  <details>
+    <summary>Where do I track mcMMO skills?</summary>
+    Use <code>/mcmmogui</code> for the GUI.
+  </details>
+
+  <details>
+    <summary>How do I claim land?</summary>
+    Use a <b>golden shovel</b> to create a claim and <code>/trust</code> to add friends.
+  </details>
+
+  <details>
+    <summary>Why don’t I have my perks?</summary>
+    Make sure your Discord is linked and relog. Some perks require specific VIP tiers or Discord boosting.
+  </details>
+
+  <details>
+    <summary>Where is the live world map?</summary>
+    <a href="https://map.wwminecraft.com" target="_blank">map.wwminecraft.com</a>
   </details>
 </section>
 
