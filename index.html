@@ -1,234 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Worth & Willi – Holiday Event Info</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1a2740 0, #05060a 55%);
-      color: #fefefe;
-      margin: 0;
-      padding: 0;
-    }
-    .page {
-      max-width: 950px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 3rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    header h1 {
-      margin: 0 0 0.5rem;
-      font-size: 2.2rem;
-    }
-    header p {
-      margin: 0;
-      color: #d5d5e0;
-      font-size: 0.98rem;
-    }
-    .card {
-      background: rgba(15, 17, 28, 0.95);
-      border-radius: 14px;
-      padding: 1.6rem 1.5rem 1.4rem;
-      margin-bottom: 1.6rem;
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
-      position: relative;
-      overflow: hidden;
-    }
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent 60%);
-      pointer-events: none;
-    }
-    .card h2 {
-      margin-top: 0;
-      font-size: 1.5rem;
-      margin-bottom: 0.7rem;
-    }
-    .card h3 {
-      margin-top: 0.4rem;
-      font-size: 1.15rem;
-      margin-bottom: 0.5rem;
-    }
-    p { line-height: 1.6; margin: 0.35rem 0; }
-    ul { padding-left: 1.3rem; margin: 0.4rem 0 0.8rem; }
-    li { margin: 0.18rem 0; }
-
-    .tag {
-      display: inline-block;
-      background: linear-gradient(135deg, #e63946, #f6bd60);
-      color: #1b1b22;
-      border-radius: 999px;
-      padding: 0.18rem 0.7rem;
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.6rem;
-      font-weight: 600;
-    }
-    .tag-green { background: linear-gradient(135deg, #2ecc71, #a3e635); color: #041006; }
-    .tag-blue { background: linear-gradient(135deg, #38bdf8, #6366f1); color: #020617; }
-
-    .bits-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 0.4rem;
-      font-size: 0.9rem;
-    }
-    .bits-table th,
-    .bits-table td {
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      padding: 0.4rem 0.5rem;
-      text-align: left;
-    }
-    .bits-table th {
-      background: rgba(248, 250, 252, 0.05);
-      font-weight: 600;
-    }
-    .bits-amt {
-      white-space: nowrap;
-      font-weight: 600;
-      color: #facc15;
-    }
-
-    .highlight { color: #f97316; font-weight: 600; }
-    .festive { color: #facc15; font-weight: 500; }
-
-    .footer-note {
-      text-align: center;
-      color: #cbd5f5;
-      font-size: 0.92rem;
-      margin-top: 1.5rem;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Worth & Willi Server Guide</title>
+  <meta name="description" content="Commands, questline, and plugin guide for the Worth & Willi Minecraft server." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-<div class="page">
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <div class="logo">W&W</div>
+        <div>
+          <h1>Worth &amp; Willi Server Guide</h1>
+          <p class="sub">Commands • Questline • Shops • Claims • Fun</p>
+        </div>
+      </div>
 
-  <header>
-    <h1>Worth &amp; Willi – Holiday Event &amp; Pies 🎄🥧</h1>
-    <p>Scares, pies, Christmas lights, and chaos… all while keeping it wholesome and family-friendly.</p>
+      <nav class="nav">
+        <a href="#start">Start Here</a>
+        <a href="#questline">Main Questline</a>
+        <a href="#commands">Commands</a>
+        <a href="#plugins">Plugins</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- 24 HOUR STREAM -->
-  <section class="card">
-    <div class="tag tag-green">24 Hour Christmas Stream</div>
-    <h2>🎅 24 Hour Christmas with Dad Stream</h2>
-    <p>
-      <span class="highlight">Monday the 22nd at 7:00 PM EST</span> through <strong>Tuesday the 23rd</strong>.
-    </p>
-    <ul>
-      <li>🍪 Baking cookies on stream</li>
-      <li>🏠 Gingerbread house competition</li>
-      <li>🔊 New sound alerts coming within a few days</li>
-    </ul>
+  <main class="wrap">
+    <section id="start" class="card hero">
+      <div class="hero-left">
+        <h2>Start Here</h2>
+        <p>
+          Welcome to the server revamp. This guide covers the <b>main questline order</b>,
+          the <b>most important commands</b>, and what each plugin category is used for.
+        </p>
 
-    <h3>🎯 Sub Goals (What Happens When We Hit Each Goal)</h3>
-    <ul>
-      <li><strong>5 Subs</strong> — Santa hat on</li>
-      <li><strong>10 Subs</strong> — Beard + Santa hat on for the whole stream</li>
-      <li><strong>15 Subs</strong> — Christmas glasses through the whole stream</li>
-      <li><strong>25 Subs</strong> — Silly string fight</li>
-      <li><strong>50 Subs</strong> — Dad wears a wig and dances 60 seconds to <em>Pink Pony Club</em></li>
-      <li><strong>100 Subs</strong> — Mom sprayed with cream (<strong>2 whole cans directly</strong>)</li>
-    </ul>
+        <div class="callouts">
+          <div class="pill">Use <code>/quests</code> to open the quest menu</div>
+          <div class="pill">Use <code>/mcmmogui</code> to track mcMMO</div>
+          <div class="pill">Use <code>/jobs</code> for the Jobs GUI</div>
+        </div>
 
-    <h3>🗓️ Tuesday Schedule (EST)</h3>
-    <ul>
-      <li><strong>9:30 AM</strong> — If Dad isn’t up by now: <strong>Penalty Pie</strong></li>
-      <li><strong>10:30 AM</strong> — Cooking breakfast + prepping dinner</li>
-      <li><strong>2:00 PM</strong> — Gingerbread building</li>
-      <li><strong>5:30 PM</strong> — Baking Cookies</li>
-      <li><strong>6:00 PM</strong> — Recording names of all gifters &amp; painting ornaments on stream</li>
-    </ul>
+        <p class="note">
+          Tip: If a command doesn’t work, try <code>/help</code> or <code>/plugins</code> may differ by rank.
+          This page focuses on “normal player” commands.
+        </p>
+      </div>
 
-    <p>Come hang out for the holiday chaos — sleep is optional. 😅💙</p>
-  </section>
+      <aside class="hero-right">
+        <div class="quickbox">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#questline">Main Questline Order</a></li>
+            <li><a href="#commands">All Helpful Commands</a></li>
+            <li><a href="#plugins">Plugin Categories</a></li>
+          </ul>
+        </div>
 
-  <!-- DECEMBER EVENT RULES -->
-  <section class="card">
-    <div class="tag tag-green">December 22nd – 27th Rules</div>
-    <h2>📅 Starting December 22nd through the 27th</h2>
-    <p>
-      During <span class="highlight">December 22nd – December 27th</span>, we’re running special
-      pie-to-the-face rules across all platforms. When a pie is triggered, the Ferris Wheel stops
-      and decides who gets hit. 🎡🥧
-    </p>
+        <div class="quickbox">
+          <h3>Key Areas</h3>
+          <ul>
+            <li><b>Spawn</b>: Queen → Mag → Bear → Derrick</li>
+            <li><b>Oasis</b>: Cosmetics exchange + money quests</li>
+            <li><b>PirateBay</b>: Unlock after Ash’s Oasis quests</li>
+            <li><b>Endgame Hub</b>: Pillagers + minigames + casino</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
 
-    <h3>🥧 December Pie Triggers</h3>
-    <ul>
-      <li><strong>Every 3 gifted subs</strong> = 1 pie</li>
-      <li><strong>8 gifted subs</strong> = 3 pies</li>
-      <li><strong>Every 2 TikTok Galaxys</strong> = 1 pie to the face</li>
-      <li><strong>Every 3 gifted YouTube memberships</strong> = 1 pie to the face</li>
-    </ul>
+    <section id="questline" class="card">
+      <h2>Main Questline (Do This In Order)</h2>
 
-    <p class="festive">
-      Reminder: The wheel is always spinning — it only stops when these events trigger it. 🎡
-    </p>
-  </section>
+      <ol class="steps">
+        <li>
+          <b>Spawn Intro</b><br/>
+          Talk to NPCs in this order in spawn:
+          <div class="inline-codes">
+            <code>Queen</code> → <code>Mag</code> → <code>Bear</code> → <code>Derrick</code>
+          </div>
+        </li>
 
-  <!-- FERRIS WHEEL -->
-  <section class="card">
-    <div class="tag">Pies &amp; Ferris Wheel</div>
-    <h2>🎡 Ferris Wheel – Who Gets Hit?</h2>
-    <p>
-      <strong>Update:</strong> The wheel is now <strong>always spinning</strong> to keep things truly random.
-      It <strong>stops only when an event triggers it</strong>, so nobody knows who it will land on.
-    </p>
+        <li>
+          <b>Travel to Oasis</b><br/>
+          After Derrick, teleport to the Oasis using:
+          <div class="inline-codes"><code>John McDonald</code></div>
+        </li>
 
-    <ul>
-      <li><span class="festive">Pink Pod</span> – Mom 🥧</li>
-      <li><span class="festive">Blue Pod</span> – Willi 🥧</li>
-      <li><span class="festive">Red Pod</span> – Dad 🥧</li>
-      <li><span class="festive">Green Pod</span> – Triggering user chooses 🥧</li>
-    </ul>
-  </section>
+        <li>
+          <b>Oasis Hub</b><br/>
+          You’ll arrive at the main hub area where you can:
+          <ul>
+            <li>Exchange coins for cosmetics</li>
+            <li>Pick up quests that reward money</li>
+          </ul>
+        </li>
 
-  <!-- BITS & SCARE TRIGGERS -->
-  <section class="card">
-    <div class="tag tag-blue">Bits &amp; Scare Triggers</div>
-    <h2>💥 Scare Alerts (Bits)</h2>
-    <p>
-      Bits still trigger events and <strong>VERY LOUD</strong> scare sounds. They also turn on the
-      <strong>Christmas table</strong> for a short time.
-    </p>
+        <li>
+          <b>Oasis Quest Category</b><br/>
+          Open quests with <code>/quests</code> and go to the <b>Oasis</b> category.<br/>
+          Complete <b>all of Ash’s quests</b>.
+        </li>
 
-    <h3>Active Bit Alerts</h3>
-    <table class="bits-table">
-      <thead>
-        <tr><th>Bits</th><th>Trigger</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="bits-amt">200</td><td>Minecraft Train</td></tr>
-        <tr><td class="bits-amt">250</td><td>Goofy yelling</td></tr>
-        <tr><td class="bits-amt">300</td><td>Boxing Bell</td></tr>
-        <tr><td class="bits-amt">350</td><td>Man Yelling</td></tr>
-        <tr><td class="bits-amt">400</td><td>Donkey Squealing Loud</td></tr>
-        <tr><td class="bits-amt">500</td><td>Deez Nuts</td></tr>
-        <tr><td class="bits-amt">550</td><td>Wake me Up Son</td></tr>
-        <tr><td class="bits-amt">750</td><td>Loud Snore</td></tr>
-        <tr><td class="bits-amt">1000</td><td>Guy Screaming Wake Up</td></tr>
-        <tr><td class="bits-amt">2500</td><td>Train horn LOUD</td></tr>
-        <tr><td class="bits-amt">3000</td><td>Clown Circus Wake LOUD</td></tr>
-        <tr><td class="bits-amt">4000</td><td>Iphone Alarm + Music Loud</td></tr>
-      </tbody>
-    </table>
-  </section>
+        <li>
+          <b>Unlock PirateBay</b><br/>
+          After completing Ash’s Oasis quests, you gain access to <b>PirateBay</b>.<br/>
+          Travel there from the ship near spawn using:
+          <div class="inline-codes"><code>Captain Snorebeard</code></div>
+          <p class="note">Captain Snorebeard only teleports players who finished the required Oasis quests.</p>
+        </li>
 
-  <p class="footer-note">
-    This page is updated as events evolve.
-    Thank you for all the support — and as always, do something with your loved ones. 💙
-  </p>
+        <li>
+          <b>Unlock Endgame Hub</b><br/>
+          Once PirateBay requirements are complete, you can be teleported to the <b>endgame hub</b>:
+          <ul>
+            <li>Island filled with pillagers</li>
+            <li>Fun games & repeatable quests</li>
+            <li>A casino</li>
+          </ul>
+        </li>
+      </ol>
 
-</div>
+      <div class="banner">
+        <b>Important:</b> If you skip steps, NPCs may not progress your storyline. Do them in order.
+      </div>
+    </section>
+
+    <section id="commands" class="card">
+      <div class="section-head">
+        <h2>Helpful Commands (Normal Players)</h2>
+        <div class="search">
+          <input id="cmdSearch" type="text" placeholder="Search commands… (ex: rtp, claim, jobs)" />
+        </div>
+      </div>
+
+      <div id="cmdGrid" class="grid"></div>
+
+      <p class="note">
+        Some commands may be disabled in certain worlds/regions or require Discord linking / permissions.
+      </p>
+    </section>
+
+    <section id="plugins" class="card">
+      <h2>Plugins (Grouped by What Players Care About)</h2>
+
+      <div class="grid two">
+        <div class="plugcat">
+          <h3>Quests & Story</h3>
+          <ul>
+            <li><b>Quests</b> — your main quest menus & categories</li>
+            <li><b>Citizens</b> — NPCs you talk to (Queen/Mag/Bear/Derrick/Ash/etc.)</li>
+            <li><b>Typewriter</b> — story/interaction systems (where used)</li>
+            <li><b>Denizen / Skript</b> — custom interactions behind the scenes</li>
+          </ul>
+        </div>
+
+        <div class="plugcat">
+          <h3>Skills & Progression</h3>
+          <ul>
+            <li><b>mcMMO</b> + <b>McmmoGuiV2</b> — skills, leveling, and GUI tracking</li>
+            <li><b>Jobs</b> + <b>JobPicker</b> — earn money by doing jobs</li>
+            <li><b>Veinminer</b> — vein mining (if enabled for your rank/tools)</li>
+          </ul>
+        </div>
+
+        <div class="plugcat">
+          <h3>Economy, Shops & Trading</h3>
+          <ul>
+            <li><b>Vault</b> — economy backbone</li>
+            <li><b>QuickShop-Hikari</b> — player shops</li>
+            <li><b>InsaneShops</b> — server shops / NPC shops</li>
+            <li><b>AxAuctions</b> — auction house</li>
+            <li><b>AxTrade</b> — safe player-to-player trading</li>
+            <li><b>Roulette / Vegas</b> — casino games</li>
+          </ul>
+        </div>
+
+        <div class="plugcat">
+          <h3>Claims & Protection</h3>
+          <ul>
+            <li><b>GriefPrevention</b> + <b>GriefPrevGUI</b> — claim land & trust friends</li>
+            <li><b>GPFlags</b> — extra claim settings (where allowed)</li>
+            <li><b>FarmProtect</b> — protect farmland from griefing</li>
+          </ul>
+        </div>
+
+        <div class="plugcat">
+          <h3>Teleport & Travel</h3>
+          <ul>
+            <li><b>Essentials / EssentialsSpawn</b> — spawn, homes, basic utilities</li>
+            <li><b>TPARequestGUI</b> — easy teleport requests</li>
+            <li><b>WildRTP / ExclusiveRandomTeleport</b> — random teleporting</li>
+            <li><b>Multiverse-Core</b> — multiple worlds (travel rules vary)</li>
+          </ul>
+        </div>
+
+        <div class="plugcat">
+          <h3>Cosmetics & Fun</h3>
+          <ul>
+            <li><b>ProCosmetics</b> — cosmetics, treasure chests, exchange NPC</li>
+            <li><b>GSit</b> — sit/lay actions</li>
+            <li><b>HeadDatabase</b> — decorative heads (if enabled)</li>
+            <li><b>URLCustomDiscs</b> — custom music discs</li>
+            <li><b>Boombox / Boop</b> — fun audio/interaction features (where used)</li>
+          </ul>
+        </div>
+
+        <div class="plugcat">
+          <h3>Minigames & Activities</h3>
+          <ul>
+            <li><b>Bedwars</b> — BedWars mode</li>
+            <li><b>Parkour</b> — parkour courses + timers</li>
+            <li><b>FunGames</b> — server minigames (as configured)</li>
+            <li><b>ClawMachine</b> — arcade-style claw machine</li>
+          </ul>
+        </div>
+
+        <div class="plugcat">
+          <h3>Maps & World Info</h3>
+          <ul>
+            <li><b>BlueMap</b> — live web map (link in Discord)</li>
+            <li><b>BetterCoords / DeathCoords</b> — coordinate helpers / death locations</li>
+          </ul>
+        </div>
+
+        <div class="plugcat">
+          <h3>Discord & Linking</h3>
+          <ul>
+            <li><b>DiscordSRV</b> — in-game chat ↔ Discord bridge</li>
+            <li><b>EssentialsDiscordLink</b> / <b>mc-DiscordLink</b> — account linking + sync</li>
+            <li><b>DiscordChat</b> — chat features (where enabled)</li>
+          </ul>
+        </div>
+
+        <div class="plugcat">
+          <h3>Safety & Anti-Cheat (mostly automatic)</h3>
+          <ul>
+            <li><b>AdvancedBan</b> — punishments</li>
+            <li><b>ChatSentinel / NoBullying / SpamMute</b> — chat moderation</li>
+            <li><b>raytraced-antixray / XRayHunter</b> — anti-xray systems</li>
+            <li><b>VelocityGuard</b> — network protection</li>
+          </ul>
+        </div>
+      </div>
+
+      <details class="all-plugins">
+        <summary>Show full plugin list (as reported by server)</summary>
+        <pre class="mono">
+Paper Plugins (9):
+- BanFromClaim, HarderWardens, McmmoGuiV2, Nexo, qGPTrust, RHLeafDecay, SkBee, Typewriter, Veinminer
+
+Bukkit Plugins (148):
+- AcceptTheRules, AdvancedBan, AntiNetherRoof, AutoPluginLoader, AutoSmelt_LTS, AxAuctions, AxGraves, AxShulkers, AxTrade, Bedwars
+- BetterCommandSpy, BetterCoords, BetterMending, BetterReset, BlueMap, Boombox, Boop, BuildHeightLimit, BukkitOfUtils, CensorSigns
+- ChatSentinel, Chunky, Citizens, ClawMachine, CMILib, CommandAPI, CommandSpyPlus, CoreProtect, DeathCoords, DecentHolograms
+- DeluxeMenus, Denizen, Disableportal, DiscordChat, DiscordSRV, Disenchanted, DoorsReloaded, DragonHealthPlugin, ElytraVaults, Essentials
+- EssentialsDiscord, EssentialsDiscordLink, EssentialsSpawn, ExclusiveRandomTeleport, ExecutableItems, fairy-lib-plugin, FarmProtect, FasterMinecarts, floodgate, FlyingAllowed
+- FunGames, Garbage, Geyser-Spigot, global_spectator_vc, GPFlags, GradientPlus, GriefPrevention, GriefPrevGUI, GSit, HarvestMaster
+- HatCommand, HeadDatabase, HeadMOTD, hRps, InsaneARMHelper, InsaneShops, InstaKillMobs, InventoryRollbackPlus, InvisibleFrames, InvisibleItemFramesLite
+- ItemEdit, ItemTag, ItsMyConfig, JobPicker, Jobs, KnockbackSync, LibsDisguises, LightUp, LiveCore, LPC
+- LuckPerms, mc-DiscordLink, mcMMO, Multiverse-Core, NBTAPI, NightVision, NoBullying, NoEndermanGriefing, NoGhastGriefing
+- NoLocatorBar, NoteBlockAPI, packetevents, Parkour, PerformanceSuite, PhantomSetings, PlaceholderAPI, PlayerKits2, PremiumVanish, ProCosmetics
+- ProtocolLib, Quests, QuickShop-Hikari, raytraced-antixray, RegionMusic, Roulette, SCore, ServerMaintenance, ServerUptime, ShapelessPortals
+- Shrug, ShutTheCluckUp, SimpleReachThrough, SinglePlayerSleep, SkinsRestorer, Skript, SpamMute, Spawn, StaffSuite, StaffSuiteAnalyticsAddon
+- StaffSuiteInventoryAddon, StaffSuiteSecurityAddon, SuperBow, TAB, TimeMute, TPARequestGUI, UltimateRewards, URLCustomDiscs, Vault, Vegas
+- VelocityGuard, ViaBackwards, ViaVersion, Villiager-on-a-leash, voicechat, VoicechatWorldguard, WaitingScreen, WelcomeTitle, WildRTP, WorldEdit
+- WorldGuard, WorldGuardExtraFlagsPlus, WorldGuardRegionProtect, XaeroForceDisabler, XaeroSharePlugin, xAntiAFK, XPBottling, XRayHunter
+        </pre>
+      </details>
+    </section>
+
+    <section id="faq" class="card">
+      <h2>FAQ</h2>
+
+      <details>
+        <summary>How do I start the main storyline?</summary>
+        <p>Go to spawn and talk to <b>Queen → Mag → Bear → Derrick</b>, then use <b>John McDonald</b> to reach the Oasis.</p>
+      </details>
+
+      <details>
+        <summary>How do I access PirateBay?</summary>
+        <p>Finish <b>all of Ash’s Oasis quests</b> in the <b>Oasis</b> category via <code>/quests</code>. Then Captain Snorebeard (ship near spawn) can teleport you.</p>
+      </details>
+
+      <details>
+        <summary>How do I claim land?</summary>
+        <p>Use the GriefPrevention claim tools/commands (see the Commands section: claim, trust, abandon, etc.).</p>
+      </details>
+
+      <details>
+        <summary>Where do I track mcMMO skills?</summary>
+        <p>Use <code>/mcmmogui</code> for the nice GUI (and <code>/mcmmo</code> for basics if enabled).</p>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Worth &amp; Willi • Server Guide • Built for the community
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
