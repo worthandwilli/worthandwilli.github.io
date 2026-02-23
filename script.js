@@ -18,7 +18,10 @@ const commands = [
   { cmd: "/trust <player>", desc: "Trust a player in your claim.", tags: ["Claims"] },
   { cmd: "/abandonclaim", desc: "Delete your claim.", tags: ["Claims"] },
 
-  { cmd: "/cosmetics", desc: "Open cosmetics menu.", tags: ["Cosmetics"] },
+  { cmd: "/cosmetics", desc: "Open the cosmetics menu.", tags: ["Cosmetics"] },
+
+  /* Death & Recovery */
+  { cmd: "/graves tp", desc: "Teleport back to your gravestone after death.", tags: ["Graves","Death"] },
 
   /* VIP */
   { cmd: "/trash", desc: "Open remote trash bin (VIP).", tags: ["VIP"] },
