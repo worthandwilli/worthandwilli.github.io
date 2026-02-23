@@ -1,92 +1,71 @@
 const commands = [
-  // Quests / Story
-  { cmd: "/quests", desc: "Open the Quests menu (categories like Oasis).", tags: ["Quests", "Story"] },
-  { cmd: "/quest", desc: "Alias for opening quests on some setups (if enabled).", tags: ["Quests", "Story"] },
+  { cmd: "/quests", desc: "Open the quests menu and quest categories.", tags: ["Quests"] },
+  { cmd: "/mcmmogui", desc: "Open the mcMMO GUI to track skills.", tags: ["mcMMO","Skills"] },
+  { cmd: "/jobs", desc: "Open the Jobs GUI.", tags: ["Jobs","Money"] },
 
-  // mcMMO / Skills
-  { cmd: "/mcmmogui", desc: "Open the mcMMO GUI to track skills and progress.", tags: ["Skills", "mcMMO"] },
-
-  // Jobs
-  { cmd: "/jobs", desc: "Open Jobs menu / GUI and manage jobs.", tags: ["Jobs", "Money"] },
-  { cmd: "/jobs join <job>", desc: "Join a job (ex: /jobs join Farmer).", tags: ["Jobs", "Money"] },
-  { cmd: "/jobs leave <job>", desc: "Leave a job.", tags: ["Jobs", "Money"] },
-
-  // Travel / Essentials basics (common)
   { cmd: "/spawn", desc: "Teleport to spawn.", tags: ["Travel"] },
-  { cmd: "/sethome <name>", desc: "Set a home location.", tags: ["Homes", "Travel"] },
-  { cmd: "/home <name>", desc: "Teleport to a saved home.", tags: ["Homes", "Travel"] },
-  { cmd: "/delhome <name>", desc: "Delete a home.", tags: ["Homes", "Travel"] },
+  { cmd: "/sethome <name>", desc: "Set a home location.", tags: ["Homes"] },
+  { cmd: "/home <name>", desc: "Teleport to a home.", tags: ["Homes"] },
 
-  // RTP / TPA
-  { cmd: "/rtp", desc: "Random teleport (WildRTP / server RTP system).", tags: ["Travel", "RTP"] },
-  { cmd: "/tpa <player>", desc: "Request to teleport to a player.", tags: ["Travel", "TPA"] },
-  { cmd: "/tpahere <player>", desc: "Request a player to teleport to you.", tags: ["Travel", "TPA"] },
-  { cmd: "/tpaccept", desc: "Accept a teleport request.", tags: ["Travel", "TPA"] },
-  { cmd: "/tpdeny", desc: "Deny a teleport request.", tags: ["Travel", "TPA"] },
+  { cmd: "/rtp", desc: "Random teleport.", tags: ["Travel"] },
+  { cmd: "/tpa <player>", desc: "Request teleport to a player.", tags: ["TPA"] },
+  { cmd: "/tpaccept", desc: "Accept a teleport request.", tags: ["TPA"] },
 
-  // Economy
   { cmd: "/bal", desc: "Check your balance.", tags: ["Money"] },
   { cmd: "/baltop", desc: "View top balances.", tags: ["Money"] },
 
-  // Claims (GriefPrevention common commands)
-  { cmd: "/claim", desc: "Create a claim (if your server uses the /claim command).", tags: ["Claims", "Protection"] },
-  { cmd: "/trust <player>", desc: "Allow someone to build in your claim.", tags: ["Claims", "Protection"] },
-  { cmd: "/untrust <player>", desc: "Remove someone's permission from your claim.", tags: ["Claims", "Protection"] },
-  { cmd: "/abandonclaim", desc: "Delete the claim you are standing in.", tags: ["Claims", "Protection"] },
-  { cmd: "/claimslist", desc: "List your claims (if enabled).", tags: ["Claims", "Protection"] },
+  { cmd: "/claim", desc: "Create a land claim.", tags: ["Claims"] },
+  { cmd: "/trust <player>", desc: "Trust a player in your claim.", tags: ["Claims"] },
+  { cmd: "/abandonclaim", desc: "Delete your claim.", tags: ["Claims"] },
 
-  // Shops / Trading
-  { cmd: "/ah", desc: "Open Auction House (AxAuctions).", tags: ["Shops", "Trading"] },
-  { cmd: "/trade <player>", desc: "Start a safe trade (AxTrade).", tags: ["Trading"] },
-  { cmd: "/qs", desc: "QuickShop commands/help (varies by config).", tags: ["Shops"] },
+  { cmd: "/cosmetics", desc: "Open cosmetics menu.", tags: ["Cosmetics"] },
 
-  // Cosmetics / Fun
-  { cmd: "/cosmetics", desc: "Open cosmetics menu (ProCosmetics).", tags: ["Cosmetics", "Fun"] },
-  { cmd: "/sit", desc: "Sit down (GSit).", tags: ["Fun"] },
-  { cmd: "/lay", desc: "Lay down (GSit).", tags: ["Fun"] },
+  /* VIP */
+  { cmd: "/trash", desc: "Open remote trash bin (VIP).", tags: ["VIP"] },
+  { cmd: "/garbage", desc: "Open remote trash bin (VIP).", tags: ["VIP"] },
+  { cmd: "/boop <player>", desc: "Boop another player (VIP).", tags: ["VIP","Fun"] },
+  { cmd: "/bfc <player>", desc: "Banish a player from your claim (VIP).", tags: ["VIP","Claims"] },
+  { cmd: "/veinminer toggle", desc: "Toggle VeinMiner (VIP).", tags: ["VIP","Mining"] },
+  { cmd: "/shrug", desc: "Shrug in chat (VIP).", tags: ["VIP","Chat"] },
 
-  // Utility
-  { cmd: "/help", desc: "View command help pages.", tags: ["Utility"] },
+  /* Ranks */
+  { cmd: "/shushwand", desc: "Get shush wand to silence mobs (Big Willies).", tags: ["VIP","Fun"] },
+  { cmd: "/hdb", desc: "Open Head Database (SuperWillies).", tags: ["VIP","Cosmetics"] },
+  { cmd: "/nv", desc: "Toggle Night Vision (SuperWillies).", tags: ["VIP"] },
+  { cmd: "/as", desc: "Toggle AutoSmelt (SuperWillies).", tags: ["VIP","Mining"] },
+
+  /* Booster */
+  { cmd: "/fly", desc: "Fly inside your own claims (Discord Booster).", tags: ["Booster"] },
 ];
 
-function render(list) {
-  const grid = document.getElementById("cmdGrid");
-  grid.innerHTML = "";
+const grid = document.getElementById("cmdGrid");
+const search = document.getElementById("cmdSearch");
 
-  if (!list.length) {
-    grid.innerHTML = `<div class="cmd"><b>No matches.</b><p class="note">Try searching “claim”, “jobs”, “rtp”, or “cosmetics”.</p></div>`;
+function render(list){
+  grid.innerHTML = "";
+  if(list.length === 0){
+    grid.innerHTML = "<p class='note'>No matching commands.</p>";
     return;
   }
 
-  for (const item of list) {
-    const el = document.createElement("div");
-    el.className = "cmd";
-    el.innerHTML = `
-      <div class="title">
-        <b><code>${escapeHtml(item.cmd)}</code></b>
-      </div>
-      <p>${escapeHtml(item.desc)}</p>
+  list.forEach(c=>{
+    const div = document.createElement("div");
+    div.className = "cmd";
+    div.innerHTML = `
+      <b><code>${c.cmd}</code></b>
+      <p>${c.desc}</p>
       <div class="tags">
-        ${item.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}
+        ${c.tags.map(t=>`<span class="tag">${t}</span>`).join("")}
       </div>
     `;
-    grid.appendChild(el);
-  }
-}
-
-function escapeHtml(str){
-  return str.replace(/[&<>"']/g, (m) => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
-  }[m]));
+    grid.appendChild(div);
+  });
 }
 
 render(commands);
 
-const input = document.getElementById("cmdSearch");
-input.addEventListener("input", () => {
-  const q = input.value.trim().toLowerCase();
-  if (!q) return render(commands);
-
+search.addEventListener("input", ()=>{
+  const q = search.value.toLowerCase();
   const filtered = commands.filter(c =>
     c.cmd.toLowerCase().includes(q) ||
     c.desc.toLowerCase().includes(q) ||
