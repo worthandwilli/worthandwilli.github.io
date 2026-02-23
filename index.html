@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Worth & Willi Server Guide</title>
-  <meta name="description" content="Worth & Willi Minecraft Server Guide – quests, commands, plugins, VIP perks, and world map." />
+  <meta name="description" content="Worth & Willi Minecraft Server Guide – quests, commands, VIP perks, rules, mods, and world map." />
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -16,7 +16,7 @@
       <div class="logo">W&W</div>
       <div>
         <h1>Worth & Willi Server Guide</h1>
-        <p class="sub">Quests • Commands • VIP • Community</p>
+        <p class="sub">Quests • Commands • VIP • Rules • Community</p>
       </div>
     </div>
 
@@ -26,7 +26,8 @@
       <a href="#map">World Map</a>
       <a href="#commands">Commands</a>
       <a href="#perks">Supporter Perks</a>
-      <a href="#plugins">Plugins</a>
+      <a href="#rules">Rules</a>
+      <a href="#mods">Client Mods</a>
       <a href="#faq">FAQ</a>
       <a href="https://map.wwminecraft.com" target="_blank">Live Map</a>
     </nav>
@@ -40,23 +41,19 @@
   <h2>Welcome</h2>
   <p>
     Welcome to the Worth & Willi Minecraft Server.  
-    This guide explains the <b>main questline order</b>, <b>helpful commands</b>,
-    <b>supporter perks</b>, and how to use the <b>live world map</b>.
+    This guide covers the <b>main questline</b>, <b>helpful commands</b>,
+    <b>supporter perks</b>, <b>server rules</b>, and <b>allowed client-side mods</b>.
   </p>
 
   <div class="callouts">
     <div class="pill"><code>/quests</code> → quest menu</div>
     <div class="pill"><code>/mcmmogui</code> → mcMMO GUI</div>
     <div class="pill"><code>/jobs</code> → Jobs GUI</div>
-    <div class="pill">
-      🌍 World Map →
-      <a href="https://map.wwminecraft.com" target="_blank">map.wwminecraft.com</a>
-    </div>
+    <div class="pill">🌍 <a href="https://map.wwminecraft.com" target="_blank">map.wwminecraft.com</a></div>
   </div>
 
   <p class="note">
-    Tip: If something doesn’t work, make sure your Discord account is linked and that you
-    completed the required quest steps.
+    This is a family-friendly server. Respect others, follow the rules, and have fun building.
   </p>
 </section>
 
@@ -65,221 +62,187 @@
   <h2>Main Questline Order</h2>
 
   <ol class="steps">
-    <li>
-      <b>Spawn Introduction</b><br>
-      Speak to NPCs in this exact order:<br>
-      <code>Queen → Mag → Bear → Derrick</code>
-    </li>
-
-    <li>
-      <b>Travel to Oasis</b><br>
-      After Derrick, teleport using <code>John McDonald</code>.
-    </li>
-
-    <li>
-      <b>Oasis Hub</b><br>
-      Exchange coins for cosmetics and pick up quests that reward money.
-    </li>
-
-    <li>
-      <b>Oasis Quest Category</b><br>
-      Open <code>/quests</code> → Oasis category → complete <b>all of Ash’s quests</b>.
-    </li>
-
-    <li>
-      <b>PirateBay Unlock</b><br>
-      After completing Ash’s quests, speak with
-      <code>Captain Snorebeard</code> on the ship near spawn.
-    </li>
-
-    <li>
-      <b>Endgame Hub</b><br>
-      Unlock the endgame island filled with pillagers, fun games, quests, and a casino.
-    </li>
+    <li><b>Spawn Intro:</b> Speak to <code>Queen → Mag → Bear → Derrick</code></li>
+    <li><b>Travel to Oasis:</b> Use <code>John McDonald</code></li>
+    <li><b>Oasis Hub:</b> Cosmetics exchange + money quests</li>
+    <li><b>Oasis Quests:</b> <code>/quests</code> → complete all of Ash’s quests</li>
+    <li><b>PirateBay:</b> Unlock via <code>Captain Snorebeard</code> near spawn</li>
+    <li><b>Endgame Hub:</b> Pillagers, games, quests, and casino</li>
   </ol>
 
   <div class="banner">
-    ⚠️ Skipping steps may prevent NPCs from progressing your storyline.
+    ⚠️ Quest steps must be completed in order or NPCs may not progress.
   </div>
 </section>
 
 <!-- WORLD MAP -->
 <section id="map" class="card">
   <h2>World Map (BlueMap)</h2>
-
   <p>
-    We strongly recommend using the live world map to explore the server,
-    locate biomes, find player shops, and plan builds.
+    Use the live world map to explore terrain, locate builds, plan routes,
+    and discover player shops.
   </p>
 
   <div class="banner">
-    🌍 <b>Live World Map:</b>
-    <a href="https://map.wwminecraft.com" target="_blank">
-      map.wwminecraft.com
-    </a>
+    🌍 <b>Live Map:</b>
+    <a href="https://map.wwminecraft.com" target="_blank">map.wwminecraft.com</a>
   </div>
 
   <ul>
-    <li>Powered by the <b>BlueMap</b> plugin</li>
-    <li>View terrain, builds, and structures in real time</li>
-    <li>Helpful for navigation and exploration</li>
-    <li>Works on desktop and mobile</li>
+    <li>Powered by BlueMap</li>
+    <li>Live, interactive, and mobile-friendly</li>
+    <li>Some locations may be hidden for balance or privacy</li>
   </ul>
-
-  <p class="note">
-    Some worlds or player locations may be hidden for privacy or gameplay balance.
-  </p>
 </section>
 
 <!-- COMMANDS -->
 <section id="commands" class="card">
   <h2>Helpful Commands</h2>
-  <p class="note">Searchable list of commonly used player commands.</p>
-
   <input id="cmdSearch" type="text" placeholder="Search commands..." />
-
   <div id="cmdGrid" class="grid"></div>
 </section>
 
 <!-- SUPPORTER PERKS -->
 <section id="perks" class="card">
   <h2>Supporter Perks</h2>
-  <p class="note">
-    Perks are granted as a thank-you for supporting the community.
-    Some perks require Discord linking.
-  </p>
+  <p class="note">Some perks require Discord linking.</p>
 
   <div class="grid two">
-
     <div class="plugcat">
-      <h3>All VIP Members</h3>
+      <h3>All VIP</h3>
       <ul>
-        <li>Money reward when linking VIP to Discord</li>
-        <li>GradientPlus special name & chat color</li>
-        <li><code>/trash</code> or <code>/garbage</code> – remote trash bin</li>
-        <li><code>/boop &lt;player&gt;</code> – boop other players</li>
-        <li><code>/bfc &lt;player&gt;</code> – banish players from your claim</li>
-        <li>gSit – sit & lay emotes</li>
-        <li>XP Bottling – bottle XP at enchanting tables</li>
-        <li><code>/veinminer toggle</code></li>
-        <li><code>/shrug</code> in chat</li>
-        <li>NoLocatorBar – replaces locator bar with XP bar</li>
+        <li>Money when linking VIP to Discord</li>
+        <li>GradientPlus VIP name & chat color</li>
+        <li><code>/trash</code> / <code>/garbage</code></li>
+        <li><code>/boop</code>, <code>/bfc</code>, <code>/shrug</code></li>
+        <li>VeinMiner, XP Bottling, gSit</li>
+        <li>NoLocatorBar enabled</li>
       </ul>
     </div>
 
     <div class="plugcat">
-      <h3>Lil Willies & Above</h3>
+      <h3>Lil Willies+</h3>
       <ul>
-        <li>SimpleVoiceChat – proximity voice chat in Minecraft</li>
+        <li>SimpleVoiceChat (proximity voice)</li>
       </ul>
     </div>
 
     <div class="plugcat">
       <h3>Big Willies</h3>
       <ul>
-        <li>
-          Shut The Cluck Up
-          <ul>
-            <li><code>/shushwand</code> to get the wand</li>
-            <li>Right/Left click mobs to silence them</li>
-          </ul>
-        </li>
-        <li>ShapelessPortals – crying obsidian works for portals</li>
-        <li>PhantomSetings – phantoms disabled</li>
+        <li><code>/shushwand</code> mob silencer</li>
+        <li>ShapelessPortals</li>
+        <li>Phantoms disabled</li>
       </ul>
     </div>
 
     <div class="plugcat">
       <h3>SuperWillies</h3>
       <ul>
-        <li><code>/hdb</code> – Head Database (no selling for profit)</li>
-        <li><code>/nv</code> – toggle Night Vision</li>
-        <li><code>/as</code> – toggle AutoSmelt</li>
+        <li><code>/hdb</code> (no selling heads)</li>
+        <li><code>/nv</code> Night Vision</li>
+        <li><code>/as</code> AutoSmelt</li>
       </ul>
     </div>
 
     <div class="plugcat">
-      <h3>Discord Server Boosters</h3>
+      <h3>Discord Boosters</h3>
       <ul>
-        <li>BetterMending – repair tools/armor using XP</li>
-        <li><code>/fly</code> inside your own claims</li>
+        <li>BetterMending</li>
+        <li><code>/fly</code> in own claims</li>
       </ul>
     </div>
-
-    <div class="plugcat">
-      <h3>Discord Ranked Community Members</h3>
-      <ul>
-        <li>Special community rank perks</li>
-        <li>Additional benefits announced in Discord</li>
-      </ul>
-    </div>
-
   </div>
 </section>
 
-<!-- PLUGINS -->
-<section id="plugins" class="card">
-  <h2>Plugin Categories</h2>
+<!-- RULES -->
+<section id="rules" class="card">
+  <h2>Server Rules</h2>
 
-  <div class="grid two">
-    <div class="plugcat">
-      <h3>Quests & Story</h3>
-      <ul>
-        <li>Quests</li>
-        <li>Citizens</li>
-        <li>Typewriter</li>
-      </ul>
-    </div>
+  <div class="banner">
+    ⚠️ Zero Tolerance Zone – Instant Ban, No Warnings
+  </div>
 
-    <div class="plugcat">
-      <h3>Skills & Economy</h3>
-      <ul>
-        <li>mcMMO</li>
-        <li>Jobs</li>
-        <li>Vault</li>
-      </ul>
-    </div>
+  <h3>Chat & Conduct</h3>
+  <ul>
+    <li>Be respectful, kind, and helpful</li>
+    <li>No swearing, hate speech, harassment, bullying, or threats</li>
+    <li>No spam, excessive caps, or attention-seeking behavior</li>
+    <li>No advertising other servers or social media</li>
+    <li>English only in public chats</li>
+    <li>Do not mention staff unless reporting the SMP being down</li>
+    <li>Do not impersonate staff or police other players</li>
+    <li>Do not discuss bans or past offenses publicly</li>
+  </ul>
 
-    <div class="plugcat">
-      <h3>Claims & Protection</h3>
-      <ul>
-        <li>GriefPrevention</li>
-        <li>GriefPrevGUI</li>
-        <li>GPFlags</li>
-      </ul>
-    </div>
+  <h3>Gameplay Rules</h3>
+  <ul>
+    <li>No griefing, stealing, or inappropriate builds</li>
+    <li>Claim land using a golden shovel</li>
+    <li>Do not touch others’ farms, animals, or claims</li>
+    <li>No begging for items or handouts</li>
+    <li>PvP only if all players agree</li>
+    <li>No traps, trolling, exploits, or bug abuse</li>
+  </ul>
 
-    <div class="plugcat">
-      <h3>Maps & World Info</h3>
-      <ul>
-        <li>BlueMap — live interactive map</li>
-        <li>
-          <a href="https://map.wwminecraft.com" target="_blank">
-            map.wwminecraft.com
-          </a>
-        </li>
-      </ul>
-    </div>
+  <h3>Staff & Enforcement</h3>
+  <ul>
+    <li>Follow staff instructions</li>
+    <li>Report issues instead of handling them yourself</li>
+    <li>Lying to staff or bypassing systems is not allowed</li>
+    <li>Accounts closely associated with banned players may also be removed</li>
+  </ul>
+
+  <p class="note">
+    We play together, not against each other. Everyone is welcome.
+  </p>
+
+  <h3>Discord Rules (Required)</h3>
+  <ul>
+    <li><a href="https://discordapp.com/terms" target="_blank">Discord Terms of Service</a></li>
+    <li><a href="https://discordapp.com/guidelines" target="_blank">Discord Community Guidelines</a></li>
+    <li><a href="https://support.discord.com/hc/en-us/articles/360024871991-Discord-Partnership-Code-of-Conduct" target="_blank">Discord Partnership Code of Conduct</a></li>
+  </ul>
+
+  <p class="note">
+    We are required to enforce Discord’s policies.
+    Questions? Open a ticket in Discord.
+  </p>
+</section>
+
+<!-- MODS -->
+<section id="mods" class="card">
+  <h2>Client-Side Mods Policy</h2>
+
+  <h3>✅ Allowed (Non-Performance / Cosmetic)</h3>
+  <ul>
+    <li>AppleSkin, Iris (Shaders), Distant Horizons</li>
+    <li>Litematica, Lighty, Minimap / World Map mods</li>
+    <li>FullBright, Zoom mods</li>
+    <li>Inventory & UI enhancements</li>
+    <li>Fresh Animations, 3D Skin Layers</li>
+  </ul>
+
+  <h3>🚫 Prohibited (Any Variant)</h3>
+  <ul>
+    <li>X-ray, cheats, hacks, or exploit mods</li>
+    <li>Auto-AFK, auto-clickers, macros</li>
+    <li>Auto reconnect, auto logout</li>
+    <li>Freecam, ReplayMod</li>
+    <li>Baritone or AI-based automation</li>
+  </ul>
+
+  <div class="banner">
+    ⚠️ Unauthorized mods may result in warnings, kicks, or bans.
   </div>
 </section>
 
 <!-- FAQ -->
 <section id="faq" class="card">
   <h2>FAQ</h2>
-
-  <details>
-    <summary>How do I start the storyline?</summary>
-    Talk to Queen → Mag → Bear → Derrick in spawn.
-  </details>
-
-  <details>
-    <summary>How do I unlock PirateBay?</summary>
-    Complete all of Ash’s Oasis quests using <code>/quests</code>.
-  </details>
-
   <details>
     <summary>Why don’t I have my perks?</summary>
-    Make sure your Discord account is linked and relog.
+    Make sure your Discord is linked and relog.
   </details>
 </section>
 
